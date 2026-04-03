@@ -11,8 +11,8 @@
 :root{
   --blue:#0A1628;--blue2:#0D1F3C;--blue3:#132748;
   --red:#C8102E;--red2:#E8314F;
-  --accent:#4D8EFF;--accent2:#7AABFF;
-  --white:#F5F7FF;--muted:#8A9BBC;--border:rgba(77,142,255,0.18);
+  --accent:#4D8EFF;--accent2:#9BC0FF;
+  --white:#F5F7FF;--muted:#B7C3DD;--border:rgba(77,142,255,0.22);
 }
 html{scroll-behavior:smooth;}
 body{background:var(--blue);color:var(--white);font-family:'Barlow',sans-serif;overflow-x:hidden;}
@@ -31,9 +31,9 @@ nav::after{
   background:linear-gradient(90deg, var(--red) 33.3%, var(--white) 33.3%, var(--white) 36%, var(--accent) 36%);
 }
 .nav-logo{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:4px;color:var(--accent2);}
-.nav-links{display:flex;gap:36px;}
-.nav-links a{color:var(--muted);text-decoration:none;font-size:0.8rem;letter-spacing:2px;text-transform:uppercase;transition:color 0.3s;cursor:pointer;}
-.nav-links a:hover{color:var(--white);}
+.nav-links{display:flex;gap:18px;align-items:center;flex-wrap:wrap;}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:0.78rem;letter-spacing:2px;text-transform:uppercase;transition:all 0.3s;cursor:pointer;padding:8px 12px;border-radius:999px;}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--white);background:rgba(200,16,46,0.12);outline:none;}
 
 /* HERO */
 #hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 56px 80px;}
@@ -59,6 +59,7 @@ nav::after{
 .delta-wrap svg{width:min(55vw,600px);height:auto;}
 
 .hero-content{position:relative;z-index:3;max-width:1000px;padding-left:24px;}
+.hero-copy-block{max-width:560px;}
 .hero-eyebrow{font-size:0.8rem;letter-spacing:5px;text-transform:uppercase;color:var(--accent2);margin-bottom:20px;opacity:0;transform:translateY(16px);animation:up 0.7s 0.1s forwards;}
 .hero-name{
   font-family:'Bebas Neue',sans-serif;font-size:clamp(5rem,13vw,11rem);
@@ -73,7 +74,7 @@ nav::after{
   opacity:0;transform:translateY(20px);animation:up 0.9s 0.45s forwards;
 }
 .hero-langs{
-  display:flex;gap:10px;flex-wrap:wrap;
+  display:flex;gap:10px;flex-wrap:wrap;align-items:center;
   margin-top:8px;
   opacity:0;transform:translateY(16px);animation:up 0.8s 0.6s forwards;
 }
@@ -85,8 +86,8 @@ nav::after{
 .hero-support-link{
   display:inline-flex;align-items:center;gap:10px;
   padding:8px 14px;border-radius:999px;
-  border:1px solid rgba(245,247,255,0.14);
-  background:rgba(10,22,40,0.34);color:var(--muted);
+  border:1px solid rgba(245,247,255,0.18);
+  background:rgba(10,22,40,0.46);color:var(--muted);
   text-decoration:none;font-size:0.74rem;letter-spacing:1.3px;text-transform:uppercase;
   transition:all 0.3s;
 }
@@ -94,13 +95,14 @@ nav::after{
   color:var(--white);border-color:rgba(200,16,46,0.3);
   background:rgba(200,16,46,0.1);transform:translateY(-1px);
 }
+.hero-support-link:focus-visible{outline:2px solid var(--accent2);outline-offset:3px;}
 .hero-support-link strong{color:var(--accent2);font-weight:600;}
 .badge{
-  border:1px solid var(--border);padding:9px 22px;border-radius:4px;
-  font-size:0.82rem;letter-spacing:1px;transition:all 0.3s;
-  background:rgba(30,95,212,0.06);cursor:pointer;user-select:none;
+  border:1px solid var(--border);padding:9px 18px;border-radius:999px;
+  font-size:0.8rem;letter-spacing:0.8px;transition:all 0.3s;
+  background:rgba(30,95,212,0.08);cursor:pointer;user-select:none;color:var(--white);font-family:inherit;
 }
-.badge:hover{background:var(--red);border-color:var(--red);color:#fff;transform:translateY(-2px);}
+.badge:hover,.badge:focus-visible{background:var(--red);border-color:var(--red);color:#fff;transform:translateY(-2px);outline:none;}
 .badge.active{background:var(--red);border-color:var(--red);color:#fff;}
 .scroll-cue{position:absolute;z-index:3;bottom:36px;left:80px;display:flex;align-items:center;gap:12px;color:var(--muted);font-size:0.75rem;letter-spacing:3px;text-transform:uppercase;opacity:0;animation:up 1s 1s forwards;}
 .scroll-cue::before{content:'';display:block;width:40px;height:1px;background:var(--red2);}
@@ -264,6 +266,16 @@ footer::before{
   background:linear-gradient(90deg,var(--red) 20%,var(--white) 20%,var(--white) 22%,var(--accent) 22%,var(--accent) 78%,var(--white) 78%,var(--white) 80%,var(--red) 80%);
 }
 footer span{color:var(--red2);}
+.footer-line{display:block;}
+.footer-line + .footer-line{margin-top:8px;}
+.tri-mark{
+  display:inline-grid;grid-template-columns:auto auto;grid-template-rows:auto auto;
+  width:10px;margin:0 7px;vertical-align:middle;transform:translateY(-1px);
+}
+.tri-mark span{width:3px;height:3px;border-radius:50%;background:var(--red2);display:block;}
+.tri-mark span:nth-child(1){grid-column:1 / span 2;justify-self:center;align-self:start;}
+.tri-mark span:nth-child(2){grid-column:1;grid-row:2;justify-self:start;align-self:end;}
+.tri-mark span:nth-child(3){grid-column:2;grid-row:2;justify-self:end;align-self:end;}
 
 /* SEP */
 .sep{display:flex;align-items:center;justify-content:center;gap:10px;padding:0 56px;}
@@ -295,11 +307,11 @@ footer span{color:var(--red2);}
 <nav>
   <div class="nav-logo">ELIEZER PRIETO</div>
   <div class="nav-links">
-    <a onclick="navTo('sobre-mi')" data-i18n="nav.about">Sobre mí</a>
-    <a onclick="navTo('experiencia')" data-i18n="nav.exp">Experiencia</a>
-    <a onclick="navTo('habilidades')" data-i18n="nav.skills">Skills</a>
-    <a onclick="navTo('educacion')" data-i18n="nav.edu">Educación</a>
-    <a onclick="navTo('contacto')" data-i18n="nav.contact">Contacto</a>
+    <a href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+    <a href="#experiencia" data-i18n="nav.exp">Experiencia</a>
+    <a href="#habilidades" data-i18n="nav.skills">Skills</a>
+    <a href="#educacion" data-i18n="nav.edu">Educación</a>
+    <a href="#contacto" data-i18n="nav.contact">Contacto</a>
   </div>
 </nav>
 
@@ -321,16 +333,18 @@ footer span{color:var(--red2);}
     </svg>
   </div>
   <div class="hero-content">
+    <div class="hero-copy-block">
     <div class="hero-eyebrow" data-i18n="hero.eyebrow">Guía Turístico · Fundador · Emprendedor</div>
     <h1 class="hero-name">ELIEZER<br><span class="line2">PRIETO</span></h1>
     <p class="hero-desc lang-fade" data-i18n="hero.desc">Cubano resiliente, narrador de experiencias y creador de negocios. De la ingeniería nuclear al turismo internacional — tres idiomas, un solo propósito: conectar.</p>
     <div class="hero-langs">
-      <div class="badge active" onclick="setLang('es')">🇨🇺 Español</div>
-      <div class="badge" onclick="setLang('en')">🇺🇸 English</div>
-      <div class="badge" onclick="setLang('pt')">🇧🇷 Português</div>
+      <button class="badge active" type="button" data-set-lang="es" aria-pressed="true">🇨🇺 Español</button>
+      <button class="badge" type="button" data-set-lang="en" aria-pressed="false">🇺🇸 English</button>
+      <button class="badge" type="button" data-set-lang="pt" aria-pressed="false">🇧🇷 Português</button>
     </div>
     <div class="hero-support">
       <a class="hero-support-link" href="support.html"><span data-i18n="hero.supportPrompt">¿Quieres donar?</span> <strong data-i18n="hero.supportLink">Ver causa</strong></a>
+    </div>
     </div>
   </div>
   <div class="scroll-cue" data-i18n="hero.scroll">Desliza</div>
@@ -613,7 +627,7 @@ footer span{color:var(--red2);}
   </div>
 </section>
 
-<footer><p data-i18n="footer">© 2026 <span>Eliezer Prieto</span> — Hecho con propósito.</p></footer>
+<footer data-i18n="footer"><span class="footer-line">© 2026 <span>Eliezer Prieto</span></span><span class="footer-line">Hecha con</span><span class="footer-line">FE <span class="tri-mark"><span></span><span></span><span></span></span> ESPERANZA <span class="tri-mark"><span></span><span></span><span></span></span> CARIDAD <span class="tri-mark"><span></span><span></span><span></span></span></span></footer>
 
 <script>
 const i18n = {
@@ -669,7 +683,7 @@ const i18n = {
     "contact.p":"Eliezer Antonio Prieto Pantoja. Actualmente en Boa Vista, Roraima, Brasil, con disponibilidad laboral inmediata a contrato para oportunidades en turismo, operaciones, proyectos técnicos y atención al cliente de alto nivel.",
     "contact.quote":'"Listo para aportar experiencia, criterio y liderazgo desde el primer día."',
     "contact.location":"Boa Vista, Roraima, Brasil","contact.availability":"Disponibilidad inmediata a contrato",
-    "footer":'© 2026 <span>Eliezer Prieto</span> — Hecho con propósito.'
+    "footer":'<span class="footer-line">© 2026 <span>Eliezer Prieto</span></span><span class="footer-line">Hecha con</span><span class="footer-line">FE <span class="tri-mark"><span></span><span></span><span></span></span> ESPERANZA <span class="tri-mark"><span></span><span></span><span></span></span> CARIDAD <span class="tri-mark"><span></span><span></span><span></span></span></span>'
   },
   en:{
     "nav.about":"About","nav.exp":"Experience","nav.skills":"Skills","nav.edu":"Education","nav.contact":"Contact",
@@ -723,7 +737,7 @@ const i18n = {
     "contact.p":"Eliezer Antonio Prieto Pantoja. Currently based in Boa Vista, Roraima, Brazil, with immediate contract availability for opportunities in tourism, operations, technical projects and high-level customer service.",
     "contact.quote":'"Ready to contribute experience, judgment and leadership from day one."',
     "contact.location":"Boa Vista, Roraima, Brazil","contact.availability":"Immediate contract availability",
-    "footer":'© 2026 <span>Eliezer Prieto</span> — Made with purpose.'
+    "footer":'<span class="footer-line">© 2026 <span>Eliezer Prieto</span></span><span class="footer-line">Made with</span><span class="footer-line">FAITH <span class="tri-mark"><span></span><span></span><span></span></span> HOPE <span class="tri-mark"><span></span><span></span><span></span></span> CHARITY <span class="tri-mark"><span></span><span></span><span></span></span></span>'
   },
   pt:{
     "nav.about":"Sobre mim","nav.exp":"Experiência","nav.skills":"Skills","nav.edu":"Educação","nav.contact":"Contato",
@@ -777,7 +791,7 @@ const i18n = {
     "contact.p":"Eliezer Antonio Prieto Pantoja. Atualmente em Boa Vista, Roraima, Brasil, com disponibilidade imediata para contrato em oportunidades de turismo, operações, projetos técnicos e atendimento ao cliente de alto nível.",
     "contact.quote":'"Pronto para contribuir com experiência, critério e liderança desde o primeiro dia."',
     "contact.location":"Boa Vista, Roraima, Brasil","contact.availability":"Disponibilidade imediata para contrato",
-    "footer":'© 2026 <span>Eliezer Prieto</span> — Feito com propósito.'
+    "footer":'<span class="footer-line">© 2026 <span>Eliezer Prieto</span></span><span class="footer-line">Feita com</span><span class="footer-line">FÉ <span class="tri-mark"><span></span><span></span><span></span></span> ESPERANÇA <span class="tri-mark"><span></span><span></span><span></span></span> CARIDADE <span class="tri-mark"><span></span><span></span><span></span></span></span>'
   }
 };
 
@@ -857,8 +871,11 @@ let currentLang='es';
 function setLang(lang){
   if(lang===currentLang)return;
   currentLang=lang;
-  document.querySelectorAll('.badge').forEach(b=>b.classList.remove('active'));
-  document.querySelectorAll('.badge')[{es:0,en:1,pt:2}[lang]].classList.add('active');
+  document.querySelectorAll('[data-set-lang]').forEach(button=>{
+    const isActive=button.getAttribute('data-set-lang')===lang;
+    button.classList.toggle('active',isActive);
+    button.setAttribute('aria-pressed',String(isActive));
+  });
   const els=document.querySelectorAll('[data-i18n]');
   els.forEach(el=>el.classList.add('lang-fade','fading'));
   setTimeout(()=>{
@@ -873,6 +890,10 @@ function navTo(id){
   const el=document.getElementById(id);
   if(el)el.scrollIntoView({behavior:'smooth'});
 }
+
+document.querySelectorAll('[data-set-lang]').forEach(button=>{
+  button.addEventListener('click',()=>setLang(button.getAttribute('data-set-lang')));
+});
 
 const bgCanvas=document.getElementById('bgSymbols');
 const bgCtx=bgCanvas?bgCanvas.getContext('2d'):null;

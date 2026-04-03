@@ -11,8 +11,8 @@
 :root{
   --blue:#0A1628;--blue2:#0D1F3C;--blue3:#132748;
   --red:#C8102E;--red2:#E8314F;
-  --accent:#4D8EFF;--accent2:#7AABFF;
-  --white:#F5F7FF;--muted:#9AA8C7;--border:rgba(77,142,255,0.18);
+  --accent:#4D8EFF;--accent2:#9BC0FF;
+  --white:#F5F7FF;--muted:#C0CAE0;--muted-strong:#D7DEF0;--border:rgba(77,142,255,0.2);
 }
 html{scroll-behavior:smooth;}
 body{
@@ -33,7 +33,7 @@ body{
   text-decoration:none;color:var(--white);background:rgba(10,22,40,0.46);
   font-size:0.78rem;letter-spacing:1.2px;text-transform:uppercase;transition:all 0.3s;
 }
-.home-link:hover,.contact-link:hover,.donate-link:hover{border-color:rgba(200,16,46,0.32);background:rgba(200,16,46,0.1);}
+.home-link:hover,.contact-link:hover,.donate-link:hover,.home-link:focus-visible,.contact-link:focus-visible,.donate-link:focus-visible{border-color:rgba(200,16,46,0.32);background:rgba(200,16,46,0.1);outline:none;}
 .lang-switch{display:flex;gap:10px;flex-wrap:wrap;}
 .lang-switch button{
   border:1px solid var(--border);background:rgba(10,22,40,0.46);color:var(--muted);
@@ -41,6 +41,7 @@ body{
   transition:all 0.3s;
 }
 .lang-switch button.active{color:var(--white);background:rgba(200,16,46,0.16);border-color:rgba(200,16,46,0.28);}
+.lang-switch button:focus-visible{outline:2px solid var(--accent2);outline-offset:3px;}
 .hero{
   display:grid;grid-template-columns:1.2fr 0.8fr;gap:28px;align-items:stretch;
 }
@@ -52,7 +53,7 @@ body{
 .eyebrow{font-size:0.74rem;letter-spacing:4px;text-transform:uppercase;color:var(--accent2);margin-bottom:14px;}
 .hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(3.5rem,8vw,6.5rem);line-height:0.92;letter-spacing:2px;margin-bottom:18px;}
 .hero-title .accent{color:var(--red2);}
-.hero-copy p{max-width:680px;color:var(--muted);font-size:1.02rem;line-height:1.9;margin-bottom:18px;}
+.hero-copy p{max-width:680px;color:var(--muted-strong);font-size:1.02rem;line-height:1.9;margin-bottom:18px;}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px;}
 .goal-card{
   padding:34px;display:flex;flex-direction:column;justify-content:space-between;
@@ -62,12 +63,12 @@ body{
 }
 .goal-label{font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent2);margin-bottom:12px;}
 .goal-amount{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,6vw,4.4rem);letter-spacing:1.5px;}
-.goal-alt{font-size:1rem;color:var(--muted);margin-top:4px;}
-.goal-note{margin-top:22px;padding-top:22px;border-top:1px solid rgba(245,247,255,0.08);color:var(--muted);line-height:1.8;font-size:0.95rem;}
+.goal-alt{font-size:1rem;color:var(--muted-strong);margin-top:4px;}
+.goal-note{margin-top:22px;padding-top:22px;border-top:1px solid rgba(245,247,255,0.08);color:var(--muted-strong);line-height:1.8;font-size:0.95rem;}
 .grid-two{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:22px;}
 .section-card{padding:34px;}
 .section-title{font-family:'Bebas Neue',sans-serif;font-size:2.1rem;letter-spacing:1.5px;margin-bottom:12px;}
-.section-copy{color:var(--muted);line-height:1.9;font-size:0.98rem;}
+.section-copy{color:var(--muted-strong);line-height:1.9;font-size:0.98rem;}
 .section-copy + .section-copy{margin-top:14px;}
 .lead-question{display:block;color:var(--white);font-size:1.08rem;font-weight:600;line-height:1.5;margin-bottom:6px;}
 .travel-visuals{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:22px 0 6px;}
@@ -76,7 +77,7 @@ body{
   background:rgba(10,22,40,0.68);
 }
 .travel-card img{width:100%;height:260px;object-fit:cover;display:block;}
-.travel-card-copy{padding:14px 16px;color:var(--muted);font-size:0.88rem;line-height:1.7;}
+.travel-card-copy{padding:14px 16px;color:var(--muted-strong);font-size:0.88rem;line-height:1.7;}
 .use-list{display:grid;gap:12px;margin-top:22px;}
 .use-item{
   display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border-radius:14px;
@@ -100,12 +101,12 @@ body{
 }
 .family-card-body{padding:18px 18px 20px;}
 .family-card-title{font-family:'Bebas Neue',sans-serif;font-size:1.45rem;letter-spacing:1px;margin-bottom:8px;}
-.family-card-copy{color:var(--muted);line-height:1.72;font-size:0.92rem;}
-.methods-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px;}
+.family-card-copy{color:var(--muted-strong);line-height:1.72;font-size:0.92rem;}
+.methods-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:22px;}
 .method-card{padding:24px;}
 .method-title{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:1px;margin-bottom:8px;}
-.method-copy{color:var(--muted);line-height:1.8;font-size:0.92rem;}
-.method-tip{margin-top:14px;color:var(--accent2);font-size:0.78rem;letter-spacing:1px;text-transform:uppercase;}
+.method-copy{color:var(--muted-strong);line-height:1.8;font-size:0.92rem;}
+.method-tip{margin-top:14px;color:var(--accent2);font-size:0.78rem;letter-spacing:1px;text-transform:uppercase;word-break:break-word;}
 .contact-stack{display:grid;gap:14px;margin-top:22px;}
 .contact-entry{
   display:flex;align-items:center;gap:18px;padding:18px 20px;border-radius:16px;
@@ -117,8 +118,17 @@ body{
 .contact-entry.static:hover{transform:none;background:rgba(19,39,72,0.62);}
 .contact-icon{font-size:1.25rem;flex-shrink:0;}
 .contact-main{font-weight:600;font-size:0.92rem;}
-.contact-sub{margin-top:2px;color:var(--muted);font-size:0.8rem;line-height:1.5;}
+.contact-sub{margin-top:2px;color:var(--muted-strong);font-size:0.8rem;line-height:1.5;}
 .news-shell{margin-top:22px;position:relative;}
+.news-shell::before,.news-shell::after{
+  content:'';position:absolute;top:0;bottom:10px;width:34px;z-index:2;pointer-events:none;
+}
+.news-shell::before{left:0;background:linear-gradient(90deg,rgba(10,22,40,0.96),rgba(10,22,40,0));}
+.news-shell::after{right:0;background:linear-gradient(270deg,rgba(10,22,40,0.96),rgba(10,22,40,0));}
+.carousel-hint{
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+  margin-top:16px;color:var(--muted);font-size:0.73rem;letter-spacing:1.3px;text-transform:uppercase;
+}
 .news-carousel{
   display:flex;gap:18px;overflow-x:auto;scroll-behavior:smooth;padding:2px 6px 10px;
   scrollbar-width:none;-webkit-overflow-scrolling:touch;touch-action:pan-x;cursor:grab;
@@ -126,14 +136,14 @@ body{
 .news-carousel::-webkit-scrollbar{display:none;}
 .news-carousel.grabbing{cursor:grabbing;}
 .news-nav{
-  position:absolute;top:50%;transform:translateY(-50%);z-index:3;
+  position:absolute;top:50%;transform:translateY(-50%);z-index:4;
   width:42px;height:42px;border-radius:999px;border:1px solid rgba(200,16,46,0.25);
   background:rgba(10,22,40,0.78);color:var(--white);cursor:pointer;
   display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all 0.3s;
 }
-.news-nav:hover{background:rgba(200,16,46,0.16);border-color:rgba(200,16,46,0.42);}
-.news-nav.prev{left:-10px;}
-.news-nav.next{right:-10px;}
+.news-nav:hover,.news-nav:focus-visible{background:rgba(200,16,46,0.16);border-color:rgba(200,16,46,0.42);outline:none;}
+.news-nav.prev{left:0;}
+.news-nav.next{right:0;}
 .news-card{
   flex:0 0 280px;text-decoration:none;color:var(--white);overflow:hidden;
   background:rgba(10,22,40,0.72);border:1px solid rgba(122,171,255,0.14);border-radius:18px;
@@ -158,7 +168,7 @@ body{
 .news-card-body{padding:18px;}
 .news-card-source{font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--accent2);margin-bottom:8px;}
 .news-card-title{font-size:0.98rem;line-height:1.65;color:var(--white);}
-.news-card-note{margin-top:10px;font-size:0.74rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted);}
+.news-card-note{margin-top:10px;font-size:0.74rem;letter-spacing:1px;text-transform:uppercase;color:var(--muted-strong);}
 .photo-carousel{display:flex;gap:18px;overflow-x:auto;scroll-behavior:smooth;padding:2px 6px 10px;scrollbar-width:none;-webkit-overflow-scrolling:touch;touch-action:pan-x;cursor:grab;}
 .photo-carousel::-webkit-scrollbar{display:none;}
 .photo-carousel.grabbing{cursor:grabbing;}
@@ -176,15 +186,15 @@ body{
 }
 .photo-card-body{padding:18px 18px 20px;}
 .photo-card-title{font-family:'Bebas Neue',sans-serif;font-size:1.45rem;letter-spacing:1px;margin-bottom:8px;}
-.photo-card-copy{color:var(--muted);line-height:1.7;font-size:0.92rem;}
+.photo-card-copy{color:var(--muted-strong);line-height:1.7;font-size:0.92rem;}
 .photo-card-note{margin-top:10px;font-size:0.74rem;letter-spacing:1px;text-transform:uppercase;color:var(--accent2);}
 .bottom-note{
   margin-top:24px;padding:22px 24px;border-radius:18px;background:rgba(200,16,46,0.08);
-  border:1px solid rgba(200,16,46,0.18);color:var(--muted);line-height:1.85;
+  border:1px solid rgba(200,16,46,0.18);color:var(--muted-strong);line-height:1.85;
 }
 footer{
   margin-top:34px;padding-top:24px;border-top:1px solid rgba(245,247,255,0.08);
-  color:var(--muted);font-size:0.78rem;letter-spacing:1.6px;text-transform:uppercase;text-align:center;
+  color:var(--muted-strong);font-size:0.78rem;letter-spacing:1.6px;text-transform:uppercase;text-align:center;
 }
 .footer-line{display:block;}
 .footer-line + .footer-line{margin-top:8px;}
@@ -198,10 +208,16 @@ footer{
 .tri-mark span:nth-child(3){grid-column:2;grid-row:2;justify-self:end;align-self:end;}
 @media(max-width:980px){
   .hero,.grid-two,.methods-grid,.travel-visuals{grid-template-columns:1fr;}
-  .news-shell{padding:0 34px;}
+  .news-shell{padding:0 44px;}
   .news-nav{width:38px;height:38px;}
   .news-nav.prev{left:0;}
   .news-nav.next{right:0;}
+}
+@media(max-width:640px){
+  .page{padding:24px 18px 72px;}
+  .hero-copy,.goal-card,.section-card,.method-card{padding-left:22px;padding-right:22px;}
+  .photo-card,.family-card,.news-card{flex-basis:86vw;}
+  .carousel-hint{font-size:0.68rem;line-height:1.5;}
 }
 </style>
 </head>
@@ -259,6 +275,10 @@ footer{
       <div class="photo-carousel" id="rightsPhotoCarousel" aria-label="Fotos de represión en Cuba"></div>
       <button class="news-nav next" type="button" id="photoNext" aria-label="Siguiente">→</button>
     </div>
+    <div class="carousel-hint">
+      <span data-i18n="rights.hint">Desliza o usa las flechas para recorrer las fotos</span>
+      <span data-i18n="rights.hint2">Bloque visual de testimonios e imágenes</span>
+    </div>
     <div class="section-copy" data-i18n="rights.p1">Esta campaña nace también de una realidad insoportable. Mi familia sigue viviendo bajo una dictadura marcada por represión, vigilancia, miedo, pobreza extrema y una violación constante de derechos humanos fundamentales.</div>
     <div class="section-copy" data-i18n="rights.p2">En Cuba la crisis no se siente en abstracto: se vive en apagones interminables, falta de agua, inseguridad alimentaria, escasez de combustible y una vida diaria dedicada a “resolver” lo básico para sobrevivir. Mientras tanto, muchas ayudas y productos esenciales terminan en circuitos de venta en dólares inaccesibles para la mayoría.</div>
     <div class="section-copy" data-i18n="rights.p3">También existe una brecha cruel entre la población y la élite del poder. Mientras millones viven con carencias, figuras cercanas al régimen exhiben privilegios y se burlan públicamente del sufrimiento del pueblo, profundizando la sensación de abandono e impunidad.</div>
@@ -267,6 +287,10 @@ footer{
       <button class="news-nav prev" type="button" id="newsPrev" aria-label="Anterior">←</button>
       <div class="news-carousel" id="rightsCarousel" aria-label="Noticias sobre derechos humanos en Cuba"></div>
       <button class="news-nav next" type="button" id="newsNext" aria-label="Siguiente">→</button>
+    </div>
+    <div class="carousel-hint">
+      <span data-i18n="rights.newsHint">Desliza o usa las flechas para abrir reportes y noticias</span>
+      <span data-i18n="rights.newsHint2">Fuentes sobre apagones, hambre, represión y pobreza</span>
     </div>
   </section>
 
@@ -297,6 +321,10 @@ footer{
       <button class="news-nav prev" type="button" id="familyPrev" aria-label="Anterior">←</button>
       <div class="family-carousel" id="familyCarousel" aria-label="Fotos de mi familia"></div>
       <button class="news-nav next" type="button" id="familyNext" aria-label="Siguiente">→</button>
+    </div>
+    <div class="carousel-hint">
+      <span data-i18n="family.hint">Desliza o usa las flechas para ver nuestras fotos</span>
+      <span data-i18n="family.hint2">Cada imagen es parte del motivo de esta causa</span>
     </div>
   </section>
 
@@ -355,11 +383,15 @@ const i18n={
     "why.copy":"No estoy pidiendo ayuda por comodidad. Estoy tratando de abrir una salida real para personas que amo. Esta campaña nace de una necesidad concreta y de la esperanza de reunir a mi familia en un entorno más seguro.",
     "rights.title":"VIOLACIONES DE DERECHOS HUMANOS EN CUBA",
     "rights.photoNote":"Ver fuente de la imagen",
+    "rights.hint":"Desliza o usa las flechas para recorrer las fotos",
+    "rights.hint2":"Bloque visual de testimonios e imágenes",
     "rights.p1":"Esta campaña nace también de una realidad insoportable. Mi familia sigue viviendo bajo una dictadura marcada por represión, vigilancia, miedo, pobreza extrema y una violación constante de derechos humanos fundamentales.",
     "rights.p2":"En Cuba la crisis no se siente en abstracto: se vive en apagones interminables, falta de agua, inseguridad alimentaria, escasez de combustible y una vida diaria dedicada a “resolver” lo básico para sobrevivir. Mientras tanto, muchas ayudas y productos esenciales terminan en circuitos de venta en dólares inaccesibles para la mayoría.",
     "rights.p3":"También existe una brecha cruel entre la población y la élite del poder. Mientras millones viven con carencias, figuras cercanas al régimen exhiben privilegios y se burlan públicamente del sufrimiento del pueblo, profundizando la sensación de abandono e impunidad.",
     "rights.p4":"Hablar libremente, disentir, protestar o intentar construir un proyecto de vida con independencia puede traer vigilancia, hostigamiento, cárcel o castigo. Por eso estamos usando esta vía: no porque sea fácil, sino porque para nosotros se ha convertido en la única salida real para sacar a mi familia de ahí.",
     "rights.newsNote":"Abrir noticia externa",
+    "rights.newsHint":"Desliza o usa las flechas para abrir reportes y noticias",
+    "rights.newsHint2":"Fuentes sobre apagones, hambre, represión y pobreza",
     "route.title":"CÓMO SERÁ EL VIAJE Y CUÁNTO CUESTA",
     "route.visual1":"Primera etapa: salida aérea desde La Habana hacia Georgetown, con escala en Santo Domingo.",
     "route.visual2":"Segunda etapa: trayecto por Guyana hasta Lethem, en la frontera con Brasil, como parte del recorrido hacia la regularización.",
@@ -381,6 +413,8 @@ const i18n={
     "use.item3":"Apoyo inicial para vivienda, alimentación y adaptación al llegar.",
     "family.title":"POR QUIÉNES ESTOY LUCHANDO",
     "family.copy":"Estas son fotos de las personas que más me importan y del motivo real de esta pelea. Cada rostro aquí es una razón concreta para no rendirme.",
+    "family.hint":"Desliza o usa las flechas para ver nuestras fotos",
+    "family.hint2":"Cada imagen es parte del motivo de esta causa",
     "support.title":"CÓMO APOYAR",
     "support.copy":"Si deseas ayudar, aquí encontrarás las formas disponibles para apoyar esta causa y acercarnos un poco más a reunir a mi familia.",
     "support.card2":"Útil para personas que prefieren donar rápido con un enlace directo y reconocido internacionalmente.",
@@ -406,11 +440,15 @@ const i18n={
     "why.copy":"I am not asking for help out of comfort. I am trying to create a real way forward for people I love. This campaign comes from a concrete need and the hope of bringing my family together in a safer environment.",
     "rights.title":"HUMAN RIGHTS VIOLATIONS IN CUBA",
     "rights.photoNote":"View image source",
+    "rights.hint":"Swipe or use the arrows to browse the photos",
+    "rights.hint2":"A visual block of testimony and images",
     "rights.p1":"This campaign also comes from an unbearable reality. My family is still living under a dictatorship marked by repression, surveillance, fear, extreme poverty and constant violations of fundamental human rights.",
     "rights.p2":"In Cuba the crisis is not abstract: it is lived through endless blackouts, lack of water, food insecurity, fuel shortages and a daily struggle to 'solve' the basics just to survive. At the same time, many aid channels and essential goods end up in dollar-only circuits that most people cannot access.",
     "rights.p3":"There is also a cruel gap between the population and the ruling elite. While millions live in deprivation, figures close to power display privileges and publicly mock the suffering of ordinary Cubans, deepening the sense of abandonment and impunity.",
     "rights.p4":"Speaking freely, dissenting, protesting or trying to build an independent life project can bring surveillance, harassment, prison or punishment. That is why we are using this route: not because it is easy, but because for us it has become the only real way to get my family out of there.",
     "rights.newsNote":"Open external article",
+    "rights.newsHint":"Swipe or use the arrows to open reports and articles",
+    "rights.newsHint2":"Sources about blackouts, hunger, repression and poverty",
     "route.title":"HOW THE JOURNEY WORKS AND WHAT IT COSTS",
     "route.visual1":"First stage: air departure from Havana to Georgetown, with a stop in Santo Domingo.",
     "route.visual2":"Second stage: route through Guyana to Lethem, on the Brazilian border, as part of the journey toward legal regularization.",
@@ -432,6 +470,8 @@ const i18n={
     "use.item3":"Initial support for housing, food and adaptation after arrival.",
     "family.title":"WHO I AM FIGHTING FOR",
     "family.copy":"These are photos of the people who matter most to me and the real reason for this fight. Every face here is a concrete reason not to give up.",
+    "family.hint":"Swipe or use the arrows to see our photos",
+    "family.hint2":"Each image is part of the reason for this cause",
     "support.title":"HOW TO HELP",
     "support.copy":"If you want to help, here are the available ways to support this cause and bring my family one step closer to being reunited.",
     "support.card2":"Useful for people who prefer a fast donation through a direct, internationally trusted link.",
@@ -457,11 +497,15 @@ const i18n={
     "why.copy":"Não estou pedindo ajuda por conforto. Estou tentando abrir uma saída real para pessoas que amo. Esta campanha nasce de uma necessidade concreta e da esperança de reunir minha família em um ambiente mais seguro.",
     "rights.title":"VIOLAÇÕES DE DIREITOS HUMANOS EM CUBA",
     "rights.photoNote":"Ver fonte da imagem",
+    "rights.hint":"Deslize ou use as setas para percorrer as fotos",
+    "rights.hint2":"Bloco visual de testemunhos e imagens",
     "rights.p1":"Esta campanha também nasce de uma realidade insuportável. Minha família continua vivendo sob uma ditadura marcada por repressão, vigilância, medo, pobreza extrema e violação constante de direitos humanos fundamentais.",
     "rights.p2":"Em Cuba, a crise não é abstrata: ela aparece em apagões intermináveis, falta de água, insegurança alimentar, escassez de combustível e numa rotina dedicada a 'resolver' o básico para sobreviver. Ao mesmo tempo, muitas ajudas e produtos essenciais acabam em circuitos de venda em dólares inacessíveis para a maioria.",
     "rights.p3":"Também existe um abismo cruel entre a população e a elite do poder. Enquanto milhões vivem na carência, figuras próximas ao regime exibem privilégios e zombam publicamente do sofrimento do povo, aprofundando a sensação de abandono e impunidade.",
     "rights.p4":"Falar livremente, discordar, protestar ou tentar construir um projeto de vida com independência pode trazer vigilância, assédio, prisão ou castigo. É por isso que estamos usando este caminho: não porque seja fácil, mas porque para nós ele se tornou a única saída real para tirar minha família de lá.",
     "rights.newsNote":"Abrir notícia externa",
+    "rights.newsHint":"Deslize ou use as setas para abrir reportagens e notícias",
+    "rights.newsHint2":"Fontes sobre apagões, fome, repressão e pobreza",
     "route.title":"COMO SERÁ A VIAGEM E QUANTO CUSTA",
     "route.visual1":"Primeira etapa: saída aérea de Havana até Georgetown, com escala em Santo Domingo.",
     "route.visual2":"Segunda etapa: trajeto pela Guiana até Lethem, na fronteira com o Brasil, como parte do percurso rumo à regularização.",
@@ -483,6 +527,8 @@ const i18n={
     "use.item3":"Apoio inicial para moradia, alimentação e adaptação na chegada.",
     "family.title":"POR QUEM ESTOU LUTANDO",
     "family.copy":"Estas são fotos das pessoas que mais importam para mim e do motivo real desta luta. Cada rosto aqui é uma razão concreta para não desistir.",
+    "family.hint":"Deslize ou use as setas para ver nossas fotos",
+    "family.hint2":"Cada imagem faz parte do motivo desta causa",
     "support.title":"COMO AJUDAR",
     "support.copy":"Se você quiser ajudar, aqui estão as formas disponíveis para apoiar esta causa e nos aproximar um pouco mais de reunir minha família.",
     "support.card2":"Útil para quem prefere doar rápido por um link direto e reconhecido internacionalmente.",
@@ -643,6 +689,12 @@ if(rightsPhotoCarousel){
     e.preventDefault();
     rightsPhotoCarousel.scrollLeft=startScroll-(e.pageX-startX);
   });
+  rightsPhotoCarousel.addEventListener('wheel',e=>{
+    if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){
+      e.preventDefault();
+      rightsPhotoCarousel.scrollLeft+=e.deltaY;
+    }
+  },{passive:false});
 }
 if(familyCarousel){
   let isDown=false,startX=0,startScroll=0;
@@ -655,6 +707,12 @@ if(familyCarousel){
     e.preventDefault();
     familyCarousel.scrollLeft=startScroll-(e.pageX-startX);
   });
+  familyCarousel.addEventListener('wheel',e=>{
+    if(Math.abs(e.deltaY)>Math.abs(e.deltaX)){
+      e.preventDefault();
+      familyCarousel.scrollLeft+=e.deltaY;
+    }
+  },{passive:false});
 }
 if(rightsCarousel){
   let isDown=false,startX=0,startScroll=0;
