@@ -129,6 +129,34 @@ nav::after{
 .ecard-desc{color:var(--muted);line-height:1.85;font-size:0.95rem;}
 .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px;}
 .tag{background:rgba(200,16,46,0.1);border:1px solid rgba(200,16,46,0.25);color:var(--red2);font-size:0.72rem;padding:4px 12px;border-radius:3px;letter-spacing:0.5px;}
+.ecard-toggle{
+  width:100%;margin-top:22px;padding:14px 18px;
+  display:flex;align-items:center;justify-content:space-between;gap:18px;
+  border:1px solid rgba(122,171,255,0.2);border-radius:8px;
+  background:rgba(10,22,40,0.48);color:var(--white);
+  font:inherit;text-align:left;cursor:pointer;transition:all 0.3s;
+}
+.ecard-toggle:hover{border-color:rgba(200,16,46,0.35);background:rgba(200,16,46,0.09);}
+.ecard-toggle-text{font-size:0.78rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--accent2);}
+.ecard-toggle-icon{font-size:1rem;color:var(--red2);transition:transform 0.3s;}
+.ecard-toggle[aria-expanded="true"] .ecard-toggle-icon{transform:rotate(180deg);}
+.ecard-panel{
+  max-height:0;overflow:hidden;opacity:0;
+  transition:max-height 0.35s ease,opacity 0.25s ease,margin-top 0.25s ease;
+}
+.ecard-panel.open{opacity:1;margin-top:18px;}
+.study-groups{display:grid;gap:14px;}
+.study-group{
+  padding:16px 18px;border-radius:8px;
+  border:1px solid rgba(122,171,255,0.14);
+  background:rgba(10,22,40,0.38);
+}
+.study-group-title{
+  margin-bottom:10px;font-size:0.76rem;letter-spacing:2px;
+  text-transform:uppercase;color:var(--red2);
+}
+.study-group ul{padding-left:18px;color:var(--muted);line-height:1.7;font-size:0.92rem;}
+.study-group li+li{margin-top:6px;}
 
 /* TOURS */
 .tours-label{font-size:0.72rem;letter-spacing:5px;text-transform:uppercase;color:var(--red2);margin-bottom:10px;}
@@ -348,6 +376,11 @@ footer span{color:var(--red2);}
         <div class="ecard-period" data-i18n="exp.period3">3 años de estudio</div>
         <div class="ecard-desc" data-i18n="exp.desc3">Formación intensiva en una de las áreas más exigentes de la ingeniería, con base en física, termodinámica, cálculo y análisis de sistemas complejos.</div>
         <div class="tags"><span class="tag" data-i18n="exp.tag3a">Ingeniería Nuclear</span><span class="tag" data-i18n="exp.tag3b">Física</span><span class="tag" data-i18n="exp.tag3c">Análisis</span><span class="tag" data-i18n="exp.tag3d">Disciplina</span></div>
+        <button class="ecard-toggle" type="button" data-accordion-target="engineering-panel" aria-expanded="false">
+          <span class="ecard-toggle-text" data-i18n="exp.toggle3">Ver asignaturas por afinidad</span>
+          <span class="ecard-toggle-icon">▼</span>
+        </button>
+        <div class="ecard-panel" id="engineering-panel" data-study-panel="engineering"></div>
       </div>
       <div class="ecard">
         <div class="ecard-icon">🧪</div>
@@ -356,6 +389,24 @@ footer span{color:var(--red2);}
         <div class="ecard-period" data-i18n="exp.period4">7 proyectos desarrollados</div>
         <div class="ecard-desc" data-i18n="exp.desc4">Participación en siete proyectos académicos orientados al pensamiento técnico, resolución de problemas y aplicación práctica de conocimientos científicos en contextos de alta exigencia.</div>
         <div class="tags"><span class="tag" data-i18n="exp.tag4a">Proyectos</span><span class="tag" data-i18n="exp.tag4b">Investigación</span><span class="tag" data-i18n="exp.tag4c">Resolución</span><span class="tag" data-i18n="exp.tag4d">Ciencia aplicada</span></div>
+        <button class="ecard-toggle" type="button" data-accordion-target="projects-panel" aria-expanded="false">
+          <span class="ecard-toggle-text" data-i18n="exp.toggle4">Ver proyectos y áreas aplicadas</span>
+          <span class="ecard-toggle-icon">▼</span>
+        </button>
+        <div class="ecard-panel" id="projects-panel" data-study-panel="projects"></div>
+      </div>
+      <div class="ecard">
+        <div class="ecard-icon">📚</div>
+        <div class="ecard-role" data-i18n="exp.role5">Estudios Humanísticos</div>
+        <div class="ecard-co">Instituto Padre Félix Varela</div>
+        <div class="ecard-period" data-i18n="exp.period5">1 año de formación</div>
+        <div class="ecard-desc" data-i18n="exp.desc5">Formación complementaria en humanidades, ética y pensamiento crítico, enriqueciendo la visión integral con la que abordo personas, cultura y propósito.</div>
+        <div class="tags"><span class="tag" data-i18n="exp.tag5a">Humanidades</span><span class="tag" data-i18n="exp.tag5b">Ética</span><span class="tag" data-i18n="exp.tag5c">Pensamiento crítico</span><span class="tag" data-i18n="exp.tag5d">Comunicación</span></div>
+        <button class="ecard-toggle" type="button" data-accordion-target="humanities-panel" aria-expanded="false">
+          <span class="ecard-toggle-text" data-i18n="exp.toggle5">Ver enfoque formativo</span>
+          <span class="ecard-toggle-icon">▼</span>
+        </button>
+        <div class="ecard-panel" id="humanities-panel" data-study-panel="humanities"></div>
       </div>
     </div>
     <div class="reveal">
@@ -566,9 +617,15 @@ const i18n = {
     "exp.role3":"Estudios en Ingeniería Nuclear","exp.period3":"3 años de estudio",
     "exp.desc3":"Tres años de formación en Ingeniería Nuclear en el InSTEC, Instituto Superior de Ciencias y Tecnologías Aplicadas, con base en física, termodinámica, cálculo y análisis de sistemas complejos.",
     "exp.tag3a":"Ingeniería Nuclear","exp.tag3b":"Física","exp.tag3c":"Análisis","exp.tag3d":"Disciplina",
+    "exp.toggle3":"Ver asignaturas por afinidad",
     "exp.role4":"Proyectos Estudiantiles","exp.period4":"7 proyectos desarrollados",
     "exp.desc4":"Participación en siete proyectos académicos orientados al pensamiento técnico, resolución de problemas y aplicación práctica de conocimientos científicos en contextos de alta exigencia.",
     "exp.tag4a":"Proyectos","exp.tag4b":"Investigación","exp.tag4c":"Resolución","exp.tag4d":"Ciencia aplicada",
+    "exp.toggle4":"Ver proyectos y áreas aplicadas",
+    "exp.role5":"Estudios Humanísticos","exp.period5":"1 año de formación",
+    "exp.desc5":"Un año de formación humanística centrado en filosofía básica, literatura, oralidad y reflexión crítica, fortaleciendo mi comunicación y profundidad de pensamiento.",
+    "exp.tag5a":"Humanidades","exp.tag5b":"Ética","exp.tag5c":"Pensamiento crítico","exp.tag5d":"Comunicación",
+    "exp.toggle5":"Ver enfoque formativo",
     "tours.label":"Tours destacados","tours.title":"MIS TOURS & RESEÑAS",
     "tour1.title":"Bici por La Habana","tour1.loc":"📍 La Habana · Civitatis","tour1.review":"Haz clic para ver las opiniones del tour en Civitatis.",
     "tour2.title":"Revolución Cubana","tour2.loc":"📍 La Habana · Civitatis","tour2.review":"Haz clic para ver las opiniones del tour en Civitatis.",
@@ -612,9 +669,15 @@ const i18n = {
     "exp.role3":"Nuclear Engineering Studies","exp.period3":"3 years of study",
     "exp.desc3":"Three years of Nuclear Engineering studies at InSTEC, the Higher Institute of Applied Sciences and Technologies, grounded in physics, thermodynamics, calculus and complex systems analysis.",
     "exp.tag3a":"Nuclear Engineering","exp.tag3b":"Physics","exp.tag3c":"Analysis","exp.tag3d":"Discipline",
+    "exp.toggle3":"View grouped coursework",
     "exp.role4":"Student Projects","exp.period4":"7 projects completed",
     "exp.desc4":"Participation in seven academic projects focused on technical thinking, problem solving and the practical application of scientific knowledge in high-demand contexts.",
     "exp.tag4a":"Projects","exp.tag4b":"Research","exp.tag4c":"Problem Solving","exp.tag4d":"Applied Science",
+    "exp.toggle4":"View projects and applied areas",
+    "exp.role5":"Humanistic Studies","exp.period5":"1 year of study",
+    "exp.desc5":"One year of humanistic studies centered on basic philosophy, literature, oral expression and critical reflection, strengthening my communication and depth of thought.",
+    "exp.tag5a":"Humanities","exp.tag5b":"Ethics","exp.tag5c":"Critical Thinking","exp.tag5d":"Communication",
+    "exp.toggle5":"View learning focus",
     "tours.label":"Featured tours","tours.title":"MY TOURS & REVIEWS",
     "tour1.title":"Bike Tour of Havana","tour1.loc":"📍 Havana · Civitatis","tour1.review":"Click to see the tour reviews on Civitatis.",
     "tour2.title":"Cuban Revolution","tour2.loc":"📍 Havana · Civitatis","tour2.review":"Click to see the tour reviews on Civitatis.",
@@ -658,9 +721,15 @@ const i18n = {
     "exp.role3":"Estudos em Engenharia Nuclear","exp.period3":"3 anos de estudo",
     "exp.desc3":"Três anos de formação em Engenharia Nuclear no InSTEC, Instituto Superior de Ciências e Tecnologias Aplicadas, com base em física, termodinâmica, cálculo e análise de sistemas complexos.",
     "exp.tag3a":"Engenharia Nuclear","exp.tag3b":"Física","exp.tag3c":"Análise","exp.tag3d":"Disciplina",
+    "exp.toggle3":"Ver disciplinas por afinidade",
     "exp.role4":"Projetos Estudantis","exp.period4":"7 projetos desenvolvidos",
     "exp.desc4":"Participação em sete projetos acadêmicos voltados ao pensamento técnico, resolução de problemas e aplicação prática de conhecimentos científicos em contextos de alta exigência.",
     "exp.tag4a":"Projetos","exp.tag4b":"Pesquisa","exp.tag4c":"Resolução","exp.tag4d":"Ciência aplicada",
+    "exp.toggle4":"Ver projetos e áreas aplicadas",
+    "exp.role5":"Estudos Humanísticos","exp.period5":"1 ano de formação",
+    "exp.desc5":"Um ano de formação humanística centrado em filosofia básica, literatura, oralidade e reflexão crítica, fortalecendo minha comunicação e profundidade de pensamento.",
+    "exp.tag5a":"Humanidades","exp.tag5b":"Ética","exp.tag5c":"Pensamento crítico","exp.tag5d":"Comunicação",
+    "exp.toggle5":"Ver foco formativo",
     "tours.label":"Tours em destaque","tours.title":"MEUS TOURS & AVALIAÇÕES",
     "tour1.title":"Bici por Havana","tour1.loc":"📍 Havana · Civitatis","tour1.review":"Clique para ver as avaliações do tour no Civitatis.",
     "tour2.title":"Revolução Cubana","tour2.loc":"📍 Havana · Civitatis","tour2.review":"Clique para ver as avaliações do tour no Civitatis.",
@@ -685,6 +754,78 @@ const i18n = {
   }
 };
 
+const studyPanels={
+  es:{
+    engineering:[
+      {title:"Matemática",items:["Álgebra Lineal y Geometría Analítica","Análisis Matemático I","Análisis Matemático II","Análisis Matemático III","Estadística y Probabilidades","Ecuaciones Diferenciales Ordinarias"]},
+      {title:"Física",items:["Física I Mecánica","Física II Electromagnetismo","Física III Óptica","Física IV Física Atómica","Ecuaciones de la Física Matemática","Neutrónica I"]},
+      {title:"Ingeniería y sistemas",items:["Termodinámica Técnica I","Termodinámica Técnica II","Procesos de Intercambio de Calor","Mecánica de los Fluidos","Mecánica de los Sólidos Rígidos","Resistencia de los Materiales"]},
+      {title:"Tecnología aplicada",items:["Programación C++","Programación Python","Programación Web","Dibujo técnico","Trabajo Ofimática Avanzado"]}
+    ],
+    projects:[
+      {title:"Modelación y análisis",items:["Modelación de Sistemas Mecánicos","Modelación de Sistemas Hidráulicos","Análisis de sistemas complejos con enfoque técnico y experimental"]},
+      {title:"Programación y desarrollo",items:["Prácticas y proyectos con Programación C++","Aplicaciones y ejercicios con Programación Python","Desarrollo de interfaces y lógica en Programación Web"]},
+      {title:"Resolución aplicada",items:["Trabajo Ofimática Avanzado","Ejercicios de integración entre cálculo, física y termodinámica","Proyectos académicos orientados a resolver problemas reales con rigor científico"]}
+    ],
+    humanities:[
+      {title:"Filosofía y pensamiento",items:["Filosofía básica","Introducción a la ética","Pensamiento crítico y reflexión personal"]},
+      {title:"Lenguaje y expresión",items:["Literatura","Oralidad","Análisis de textos e ideas"]},
+      {title:"Formación complementaria",items:["Comunicación humanística","Diálogo entre cultura, fe y sociedad","Herramientas para comprender mejor a las personas y sus contextos"]}
+    ]
+  },
+  en:{
+    engineering:[
+      {title:"Mathematics",items:["Linear Algebra and Analytic Geometry","Mathematical Analysis I","Mathematical Analysis II","Mathematical Analysis III","Statistics and Probability","Ordinary Differential Equations"]},
+      {title:"Physics",items:["Physics I Mechanics","Physics II Electromagnetism","Physics III Optics","Physics IV Atomic Physics","Equations of Mathematical Physics","Neutronics I"]},
+      {title:"Engineering and systems",items:["Technical Thermodynamics I","Technical Thermodynamics II","Heat Transfer Processes","Fluid Mechanics","Rigid Body Mechanics","Strength of Materials"]},
+      {title:"Applied technology",items:["C++ Programming","Python Programming","Web Programming","Technical Drawing","Advanced Office Work"]}
+    ],
+    projects:[
+      {title:"Modeling and analysis",items:["Mechanical Systems Modeling","Hydraulic Systems Modeling","Complex systems analysis with a technical and experimental approach"]},
+      {title:"Programming and development",items:["Hands-on work and projects in C++ Programming","Applications and exercises in Python Programming","Interface and logic development in Web Programming"]},
+      {title:"Applied problem solving",items:["Advanced Office Work","Integrated exercises combining calculus, physics and thermodynamics","Academic projects focused on solving real problems with scientific rigor"]}
+    ],
+    humanities:[
+      {title:"Philosophy and thought",items:["Basic philosophy","Introduction to ethics","Critical thinking and personal reflection"]},
+      {title:"Language and expression",items:["Literature","Oral expression","Analysis of texts and ideas"]},
+      {title:"Complementary formation",items:["Humanistic communication","Dialogue across culture, faith and society","Tools to better understand people and their contexts"]}
+    ]
+  },
+  pt:{
+    engineering:[
+      {title:"Matemática",items:["Álgebra Linear e Geometria Analítica","Análise Matemática I","Análise Matemática II","Análise Matemática III","Estatística e Probabilidades","Equações Diferenciais Ordinárias"]},
+      {title:"Física",items:["Física I Mecânica","Física II Eletromagnetismo","Física III Óptica","Física IV Física Atômica","Equações da Física Matemática","Neutrônica I"]},
+      {title:"Engenharia e sistemas",items:["Termodinâmica Técnica I","Termodinâmica Técnica II","Processos de Transferência de Calor","Mecânica dos Fluidos","Mecânica dos Sólidos Rígidos","Resistência dos Materiais"]},
+      {title:"Tecnologia aplicada",items:["Programação C++","Programação Python","Programação Web","Desenho técnico","Trabalho de Informática Avançado"]}
+    ],
+    projects:[
+      {title:"Modelagem e análise",items:["Modelagem de Sistemas Mecânicos","Modelagem de Sistemas Hidráulicos","Análise de sistemas complexos com enfoque técnico e experimental"]},
+      {title:"Programação e desenvolvimento",items:["Práticas e projetos em Programação C++","Aplicações e exercícios em Programação Python","Desenvolvimento de interfaces e lógica em Programação Web"]},
+      {title:"Resolução aplicada",items:["Trabalho de Informática Avançado","Exercícios de integração entre cálculo, física e termodinâmica","Projetos acadêmicos voltados à solução de problemas reais com rigor científico"]}
+    ],
+    humanities:[
+      {title:"Filosofia e pensamento",items:["Filosofia básica","Introdução à ética","Pensamento crítico e reflexão pessoal"]},
+      {title:"Linguagem e expressão",items:["Literatura","Oralidade","Análise de textos e ideias"]},
+      {title:"Formação complementar",items:["Comunicação humanística","Diálogo entre cultura, fé e sociedade","Ferramentas para compreender melhor as pessoas e seus contextos"]}
+    ]
+  }
+};
+
+function renderStudyPanels(lang){
+  const groupsByPanel=studyPanels[lang]||studyPanels.es;
+  document.querySelectorAll('[data-study-panel]').forEach(panel=>{
+    const panelKey=panel.getAttribute('data-study-panel');
+    const groups=groupsByPanel[panelKey]||[];
+    panel.innerHTML=`<div class="study-groups">${groups.map(group=>`
+      <div class="study-group">
+        <div class="study-group-title">${group.title}</div>
+        <ul>${group.items.map(item=>`<li>${item}</li>`).join('')}</ul>
+      </div>
+    `).join('')}</div>`;
+    if(panel.classList.contains('open'))panel.style.maxHeight=panel.scrollHeight+'px';
+  });
+}
+
 let currentLang='es';
 function setLang(lang){
   if(lang===currentLang)return;
@@ -696,6 +837,7 @@ function setLang(lang){
   setTimeout(()=>{
     const t=i18n[lang];
     els.forEach(el=>{const k=el.getAttribute('data-i18n');if(t[k]!==undefined)el.innerHTML=t[k];});
+    renderStudyPanels(lang);
     els.forEach(el=>el.classList.remove('fading'));
   },220);
 }
@@ -825,6 +967,18 @@ const obs=new IntersectionObserver(entries=>{
   entries.forEach((e,i)=>{if(e.isIntersecting)setTimeout(()=>e.target.classList.add('visible'),i*100);});
 },{threshold:0.1});
 document.querySelectorAll('.reveal').forEach(r=>obs.observe(r));
+
+renderStudyPanels(currentLang);
+document.querySelectorAll('[data-accordion-target]').forEach(button=>{
+  button.addEventListener('click',()=>{
+    const panel=document.getElementById(button.getAttribute('data-accordion-target'));
+    if(!panel)return;
+    const willOpen=button.getAttribute('aria-expanded')!=='true';
+    button.setAttribute('aria-expanded',String(willOpen));
+    panel.classList.toggle('open',willOpen);
+    panel.style.maxHeight=willOpen?panel.scrollHeight+'px':'0px';
+  });
+});
 
 // Carousel
 const track=document.getElementById('track');
