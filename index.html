@@ -17,10 +17,14 @@
 <meta property="og:url" content="https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/">
 <meta property="og:site_name" content="Eliezer Prieto CV">
 <meta property="og:image" content="https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/Hero.webp">
+<meta property="og:image:alt" content="Eliezer Prieto Curriculum Vitae y perfil profesional online">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1600">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Eliezer Prieto CV | Curriculum Vitae Online">
 <meta name="twitter:description" content="Curriculum vitae online, hoja de vida y perfil profesional de Eliezer Prieto en GitHub Pages.">
 <meta name="twitter:image" content="https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/Hero.webp">
+<meta name="twitter:image:alt" content="Eliezer Prieto Curriculum Vitae y perfil profesional online">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="Hero.webp" fetchpriority="high">
@@ -76,6 +80,21 @@
         "hoja de vida",
         "perfil profesional"
       ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/#webpage",
+      "url": "https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/",
+      "name": "Eliezer Prieto Curriculum Vitae",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Eliezer Prieto CV",
+        "url": "https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/"
+      },
+      "about": {
+        "@id": "https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/#eliezer-prieto"
+      },
+      "description": "CV online, hoja de vida y perfil profesional de Eliezer Prieto en GitHub Pages."
     }
   ]
 }
@@ -138,6 +157,10 @@ nav::after{
 .delta-wrap svg{width:min(55vw,600px);height:auto;}
 
 .hero-content{position:relative;z-index:3;max-width:1000px;padding-left:24px;}
+.hero-download{
+  position:absolute;top:128px;right:56px;z-index:4;
+  display:flex;justify-content:flex-end;
+}
 .hero-copy-block{max-width:560px;}
 .hero-seo-image{
   position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;
@@ -179,6 +202,22 @@ nav::after{
 }
 .hero-support-link:focus-visible{outline:2px solid var(--accent2);outline-offset:3px;}
 .hero-support-link strong{color:var(--accent2);font-weight:600;}
+.hero-download-link{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:12px 18px;border-radius:999px;
+  border:1px solid rgba(245,247,255,0.22);
+  background:rgba(245,247,255,0.08);color:var(--white);
+  text-decoration:none;font-size:0.76rem;font-weight:600;
+  letter-spacing:1.5px;text-transform:uppercase;
+  box-shadow:0 10px 24px rgba(0,0,0,0.18);
+  transition:all 0.3s;
+}
+.hero-download-link:hover{
+  background:rgba(200,16,46,0.14);border-color:rgba(200,16,46,0.42);
+  transform:translateY(-2px);
+}
+.hero-download-link:focus-visible{outline:2px solid var(--accent2);outline-offset:3px;}
+.hero-download-link svg{width:16px;height:16px;fill:currentColor;}
 .badge{
   border:1px solid var(--border);padding:9px 18px;border-radius:999px;
   font-size:0.8rem;letter-spacing:0.8px;transition:all 0.3s;
@@ -346,7 +385,8 @@ nav::after{
 .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
 .contact-intro p{color:var(--muted);line-height:1.9;font-size:1rem;margin-bottom:20px;}
 .contact-intro blockquote{border-left:2px solid var(--red);padding-left:20px;font-style:italic;color:var(--muted);font-size:0.95rem;line-height:1.8;}
-.contact-cta{margin-top:22px;display:flex;flex-wrap:wrap;}
+.contact-cta{margin-top:22px;display:flex;flex-wrap:wrap;gap:12px;}
+.contact-cta .hero-download-link{background:rgba(245,247,255,0.06);}
 .clinks{display:flex;flex-direction:column;gap:14px;}
 .clink{display:flex;align-items:center;gap:18px;background:var(--blue3);border:1px solid var(--border);border-radius:8px;padding:18px 24px;text-decoration:none;color:var(--white);transition:all 0.3s;}
 .clink:hover{border-color:var(--red2);transform:translateX(8px);background:rgba(200,16,46,0.1);}
@@ -411,8 +451,10 @@ footer span{color:var(--red2);}
   .carousel-track{padding:10px 56px 28px;}
   .about-wrap,.exp-grid,.skills-grid,.contact-wrap,.blog-grid{grid-template-columns:1fr;}
   .edu-item{grid-template-columns:1fr;gap:10px;}
+  .hero-download{top:98px;right:24px;}
   .hero-name{font-size:clamp(4rem,18vw,7rem);}
   .ecard-head{align-items:flex-start;flex-direction:column;}
+  .hero-download-link{padding:10px 14px;font-size:0.68rem;}
 }
 </style>
 </head>
@@ -447,6 +489,12 @@ footer span{color:var(--red2);}
       <line x1="155" y1="185" x2="25" y2="338" stroke="#C8102E" stroke-width="1" opacity="0.35"/>
       <line x1="245" y1="185" x2="375" y2="338" stroke="#C8102E" stroke-width="1" opacity="0.35"/>
     </svg>
+  </div>
+  <div class="hero-download">
+    <a class="hero-download-link" href="Eliezer-Prieto-CV-ES.pdf" download="Eliezer-Prieto-CV-ES.pdf">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.29a1 1 0 1 1 1.4 1.41l-4 3.99a1 1 0 0 1-1.4 0l-4-3.99a1 1 0 0 1 1.4-1.41L11 12.59V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/></svg>
+      <span data-i18n="hero.download">Download CV</span>
+    </a>
   </div>
   <div class="hero-content">
     <div class="hero-copy-block">
@@ -724,27 +772,24 @@ footer span{color:var(--red2);}
 
 <div class="sep"><div class="sep-line"></div><div class="sep-dots"><div class="row"><span>●</span></div><div class="row"><span>●</span><span>●</span></div></div><div class="sep-line"></div></div>
 
-<section id="blog" class="sec">
+<section id="faq" class="sec">
   <div class="reveal">
-    <p class="label" data-i18n="blog.label">05 — SEO Content</p>
-    <h2 class="big-title" data-i18n="blog.title">ARTÍCULOS RECOMENDADOS PARA MI CV ONLINE</h2>
+    <p class="label" data-i18n="faq.label">05 — FAQ SEO</p>
+    <h2 class="big-title" data-i18n="faq.title">PREGUNTAS FRECUENTES SOBRE EL CV DE ELIEZER PRIETO</h2>
     <div class="rule"></div>
   </div>
-  <div class="blog-grid reveal">
-    <article class="blog-card">
-      <h3 data-i18n="blog.post1.title">Eliezer Prieto CV: de la ingeniería nuclear al turismo internacional</h3>
-      <p data-i18n="blog.post1.copy">Un artículo que conecte tu historia profesional, tu cambio de sector y el valor diferencial de tu perfil profesional multilingüe.</p>
-      <a href="#sobre-mi" data-i18n="blog.read">Ver base del contenido</a>
+  <div class="faq-list reveal">
+    <article class="faq-item">
+      <h3 data-i18n="faq.q1">¿Dónde encuentro el CV de Eliezer Prieto?</h3>
+      <p data-i18n="faq.a1">En esta web puedes encontrar el curriculum vitae online, la hoja de vida digital y el perfil profesional actualizado de Eliezer Prieto, con experiencia, educación, habilidades y contacto.</p>
     </article>
-    <article class="blog-card">
-      <h3 data-i18n="blog.post2.title">Hoja de vida de Eliezer Prieto: habilidades, idiomas y experiencia real con viajeros</h3>
-      <p data-i18n="blog.post2.copy">Una pieza orientada a keywords de CV online, hoja de vida y experiencia profesional aplicada al turismo y atención al cliente.</p>
-      <a href="#habilidades" data-i18n="blog.read">Ver base del contenido</a>
+    <article class="faq-item">
+      <h3 data-i18n="faq.q2">¿Qué incluye la hoja de vida de Eliezer Prieto?</h3>
+      <p data-i18n="faq.a2">Incluye experiencia profesional en turismo y emprendimiento, formación técnica y humanística, idiomas, proyectos y enlaces directos para contacto profesional.</p>
     </article>
-    <article class="blog-card">
-      <h3 data-i18n="blog.post3.title">Eliezer Prieto en GitHub Pages: currículum vitae, proyectos y contacto profesional</h3>
-      <p data-i18n="blog.post3.copy">Un contenido pensado para reforzar la búsqueda de tu nombre completo asociado a GitHub Pages, curriculum vitae y perfil profesional.</p>
-      <a href="#contacto" data-i18n="blog.read">Ver base del contenido</a>
+    <article class="faq-item">
+      <h3 data-i18n="faq.q3">¿Dónde está publicado el perfil profesional online de Eliezer Prieto?</h3>
+      <p data-i18n="faq.a3">El perfil profesional online de Eliezer Prieto está publicado en GitHub Pages, con una versión optimizada para SEO y accesible desde cualquier dispositivo.</p>
     </article>
   </div>
 </section>
@@ -763,6 +808,10 @@ footer span{color:var(--red2);}
       <p data-i18n="contact.p">Eliezer Antonio Prieto Pantoja. Actualmente en Boa Vista, Roraima, Brasil, con disponibilidad laboral inmediata a contrato para oportunidades en turismo, operaciones, proyectos técnicos y atención al cliente de alto nivel.</p>
       <blockquote data-i18n="contact.quote">"Listo para aportar experiencia, criterio y liderazgo desde el primer día."</blockquote>
       <div class="contact-cta">
+        <a class="hero-download-link" href="Eliezer-Prieto-CV-ES.pdf" download="Eliezer-Prieto-CV-ES.pdf">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.29a1 1 0 1 1 1.4 1.41l-4 3.99a1 1 0 0 1-1.4 0l-4-3.99a1 1 0 0 1 1.4-1.41L11 12.59V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/></svg>
+          <span data-i18n="contact.download">Download CV</span>
+        </a>
         <a class="hero-support-link" href="support.html"><span data-i18n="contact.supportPrompt">También puedes apoyar mi causa</span> <strong data-i18n="contact.supportLink">Ver donaciones</strong></a>
       </div>
     </div>
@@ -797,6 +846,7 @@ const i18n = {
     "hero.desc":"Cubano resiliente, narrador de experiencias y creador de negocios. De la ingeniería nuclear al turismo internacional — tres idiomas, un solo propósito: conectar.",
     "hero.supportPrompt":"¿Quieres donar?",
     "hero.supportLink":"Ver causa",
+    "hero.download":"Download CV",
     "hero.scroll":"Desliza",
     "seo.p1":"Este sitio funciona como el <strong>Curriculum Vitae online de Eliezer Prieto</strong>, una <strong>hoja de vida profesional</strong> pensada para mostrar experiencia, educación, habilidades, proyectos y formas de contacto desde GitHub Pages.",
     "seo.p2":"Aquí presento mi <strong>CV online</strong> y mi <strong>perfil profesional</strong> de forma clara, actualizada y accesible en español, inglés y portugués, para mostrar mi experiencia, mi formación y el valor real que puedo aportar.",
@@ -842,19 +892,19 @@ const i18n = {
     "edu.y1":"Formación Base","edu.inst1":"Instituto Preuniversitario Vocacional de Ciencias Exactas · Cuba","edu.note1":"Una de las instituciones más exigentes de Cuba. Formación intensiva en matemáticas, física y ciencias aplicadas que forjó mi pensamiento analítico y disciplina.",
     "edu.y2":"Educación Superior","edu.title2":"Ingeniería Nuclear","edu.inst2":"Universidad · Cuba","edu.note2":"Estudios en una de las ingenierías más complejas y exigentes. Física nuclear, termodinámica y sistemas de alta complejidad técnica.",
     "edu.y3":"Formación Humanística","edu.inst3":"Instituto de Estudios Eclesiásticos · Cuba","edu.note3":"Un año de humanidades, ética y pensamiento crítico. Enriqueció mi visión del mundo y mi capacidad de conectar con personas de distintas culturas y creencias.",
-    "blog.label":"05 — SEO Content","blog.title":"ARTÍCULOS RECOMENDADOS PARA MI CV ONLINE",
-    "blog.post1.title":"Eliezer Prieto CV: de la ingeniería nuclear al turismo internacional",
-    "blog.post1.copy":"Un artículo que conecte tu historia profesional, tu cambio de sector y el valor diferencial de tu perfil profesional multilingüe.",
-    "blog.post2.title":"Hoja de vida de Eliezer Prieto: habilidades, idiomas y experiencia real con viajeros",
-    "blog.post2.copy":"Una pieza orientada a keywords de CV online, hoja de vida y experiencia profesional aplicada al turismo y atención al cliente.",
-    "blog.post3.title":"Eliezer Prieto en GitHub Pages: currículum vitae, proyectos y contacto profesional",
-    "blog.post3.copy":"Un contenido pensado para reforzar la búsqueda de tu nombre completo asociado a GitHub Pages, curriculum vitae y perfil profesional.",
-    "blog.read":"Ver base del contenido",
+    "faq.label":"05 — FAQ SEO","faq.title":"PREGUNTAS FRECUENTES SOBRE EL CV DE ELIEZER PRIETO",
+    "faq.q1":"¿Dónde encuentro el CV de Eliezer Prieto?",
+    "faq.a1":"En esta web puedes encontrar el curriculum vitae online, la hoja de vida digital y el perfil profesional actualizado de Eliezer Prieto, con experiencia, educación, habilidades y contacto.",
+    "faq.q2":"¿Qué incluye la hoja de vida de Eliezer Prieto?",
+    "faq.a2":"Incluye experiencia profesional en turismo y emprendimiento, formación técnica y humanística, idiomas, proyectos y enlaces directos para contacto profesional.",
+    "faq.q3":"¿Dónde está publicado el perfil profesional online de Eliezer Prieto?",
+    "faq.a3":"El perfil profesional online de Eliezer Prieto está publicado en GitHub Pages, con una versión optimizada para SEO y accesible desde cualquier dispositivo.",
     "contact.label":"06 — Contacto","contact.title":"HABLEMOS",
     "contact.p":"Eliezer Antonio Prieto Pantoja. Actualmente en Boa Vista, Roraima, Brasil, con disponibilidad laboral inmediata a contrato para oportunidades en turismo, operaciones, proyectos técnicos y atención al cliente de alto nivel.",
     "contact.quote":'"Listo para aportar experiencia, criterio y liderazgo desde el primer día."',
     "contact.supportPrompt":"También puedes apoyar mi causa",
     "contact.supportLink":"Ver donaciones",
+    "contact.download":"Download CV",
     "contact.location":"Boa Vista, Roraima, Brasil","contact.availability":"Disponibilidad inmediata a contrato",
     "footer":'<span class="footer-line">© 2026 <span>Eliezer Prieto</span></span><span class="footer-line">Hecha con</span><span class="footer-line">FE <span class="tri-mark"><span></span><span></span><span></span></span> ESPERANZA <span class="tri-mark"><span></span><span></span><span></span></span> CARIDAD <span class="tri-mark"><span></span><span></span><span></span></span></span>'
   },
@@ -864,6 +914,7 @@ const i18n = {
     "hero.desc":"Resilient Cuban, experience storyteller and business creator. From nuclear engineering to international tourism — three languages, one purpose: to connect.",
     "hero.supportPrompt":"Want to donate?",
     "hero.supportLink":"See cause",
+    "hero.download":"Download CV",
     "hero.scroll":"Scroll",
     "seo.p1":"This site works as the <strong>online Curriculum Vitae of Eliezer Prieto</strong>, a professional <strong>resume and career profile</strong> designed to show experience, education, skills, projects and contact options on GitHub Pages.",
     "seo.p2":"Here I present my <strong>online CV</strong> and <strong>professional profile</strong> in a clear, updated format available in Spanish, English and Portuguese, showing my experience, education and the real value I can bring.",
@@ -909,19 +960,19 @@ const i18n = {
     "edu.y1":"Foundation","edu.inst1":"Pre-University Institute of Exact Sciences · Cuba","edu.note1":"One of Cuba's most demanding institutions. Intensive training in mathematics, physics and applied sciences that shaped my analytical thinking and discipline.",
     "edu.y2":"Higher Education","edu.title2":"Nuclear Engineering","edu.inst2":"University · Cuba","edu.note2":"Studies in one of the most complex and demanding fields of engineering. Nuclear physics, thermodynamics and high-complexity technical systems.",
     "edu.y3":"Humanistic Studies","edu.inst3":"Ecclesiastical Studies Institute · Cuba","edu.note3":"One year of humanities, ethics and critical thinking. Enriched my worldview and ability to connect with people from different cultures and beliefs.",
-    "blog.label":"05 — SEO Content","blog.title":"RECOMMENDED ARTICLES FOR MY ONLINE CV",
-    "blog.post1.title":"Eliezer Prieto CV: from nuclear engineering to international tourism",
-    "blog.post1.copy":"An article connecting your professional story, your career transition and the differentiating value of your multilingual professional profile.",
-    "blog.post2.title":"Eliezer Prieto resume: skills, languages and real experience with travelers",
-    "blog.post2.copy":"A piece oriented to resume, CV online and professional experience keywords applied to tourism and customer service.",
-    "blog.post3.title":"Eliezer Prieto on GitHub Pages: curriculum vitae, projects and professional contact",
-    "blog.post3.copy":"Content designed to reinforce searches for your full name connected to GitHub Pages, curriculum vitae and professional profile.",
-    "blog.read":"See content base",
+    "faq.label":"05 — SEO FAQ","faq.title":"FREQUENT QUESTIONS ABOUT ELIEZER PRIETO'S CV",
+    "faq.q1":"Where can I find Eliezer Prieto's CV?",
+    "faq.a1":"On this website you can find Eliezer Prieto's online curriculum vitae, digital resume and updated professional profile, including experience, education, skills and contact information.",
+    "faq.q2":"What does Eliezer Prieto's resume include?",
+    "faq.a2":"It includes professional experience in tourism and entrepreneurship, technical and humanistic education, languages, projects and direct links for professional contact.",
+    "faq.q3":"Where is Eliezer Prieto's professional profile published?",
+    "faq.a3":"Eliezer Prieto's online professional profile is published on GitHub Pages in an SEO-optimized format accessible from any device.",
     "contact.label":"06 — Contact","contact.title":"LET'S TALK",
     "contact.p":"Eliezer Antonio Prieto Pantoja. Currently based in Boa Vista, Roraima, Brazil, with immediate contract availability for opportunities in tourism, operations, technical projects and high-level customer service.",
     "contact.quote":'"Ready to contribute experience, judgment and leadership from day one."',
     "contact.supportPrompt":"You can also support my cause",
     "contact.supportLink":"View donations",
+    "contact.download":"Download CV",
     "contact.location":"Boa Vista, Roraima, Brazil","contact.availability":"Immediate contract availability",
     "footer":'<span class="footer-line">© 2026 <span>Eliezer Prieto</span></span><span class="footer-line">Made with</span><span class="footer-line">FAITH <span class="tri-mark"><span></span><span></span><span></span></span> HOPE <span class="tri-mark"><span></span><span></span><span></span></span> CHARITY <span class="tri-mark"><span></span><span></span><span></span></span></span>'
   },
@@ -931,6 +982,7 @@ const i18n = {
     "hero.desc":"Cubano resiliente, narrador de experiências e criador de negócios. Da engenharia nuclear ao turismo internacional — três idiomas, um único propósito: conectar.",
     "hero.supportPrompt":"Quer doar?",
     "hero.supportLink":"Ver causa",
+    "hero.download":"Download CV",
     "hero.scroll":"Role",
     "seo.p1":"Este site funciona como o <strong>Curriculum Vitae online de Eliezer Prieto</strong>, uma <strong>folha de vida e perfil profissional</strong> pensada para mostrar experiência, educação, habilidades, projetos e formas de contato no GitHub Pages.",
     "seo.p2":"Aqui apresento meu <strong>CV online</strong> e meu <strong>perfil profissional</strong> de forma clara, atualizada e acessível em espanhol, inglês e português, mostrando minha experiência, minha formação e o valor real que posso entregar.",
@@ -976,19 +1028,19 @@ const i18n = {
     "edu.y1":"Formação Base","edu.inst1":"Instituto Pré-Universitário Vocacional de Ciências Exatas · Cuba","edu.note1":"Uma das instituições mais exigentes de Cuba. Formação intensiva em matemática, física e ciências aplicadas que moldou meu pensamento analítico e disciplina.",
     "edu.y2":"Educação Superior","edu.title2":"Engenharia Nuclear","edu.inst2":"Universidade · Cuba","edu.note2":"Estudos em uma das engenharias mais complexas. Física nuclear, termodinâmica e sistemas de alta complexidade técnica.",
     "edu.y3":"Formação Humanística","edu.inst3":"Instituto de Estudos Eclesiásticos · Cuba","edu.note3":"Um ano de humanidades, ética e pensamento crítico. Enriqueceu minha visão de mundo e minha capacidade de conectar com pessoas de diferentes culturas.",
-    "blog.label":"05 — SEO Content","blog.title":"ARTIGOS RECOMENDADOS PARA MEU CV ONLINE",
-    "blog.post1.title":"Eliezer Prieto CV: da engenharia nuclear ao turismo internacional",
-    "blog.post1.copy":"Um artigo que conecte sua história profissional, sua mudança de setor e o valor diferencial do seu perfil profissional multilíngue.",
-    "blog.post2.title":"Folha de vida de Eliezer Prieto: habilidades, idiomas e experiência real com viajantes",
-    "blog.post2.copy":"Um conteúdo orientado a palavras-chave de CV online, folha de vida e experiência profissional aplicada ao turismo e atendimento ao cliente.",
-    "blog.post3.title":"Eliezer Prieto no GitHub Pages: curriculum vitae, projetos e contato profissional",
-    "blog.post3.copy":"Um conteúdo pensado para reforçar a busca do seu nome completo associado a GitHub Pages, curriculum vitae e perfil profissional.",
-    "blog.read":"Ver base do conteúdo",
+    "faq.label":"05 — FAQ SEO","faq.title":"PERGUNTAS FREQUENTES SOBRE O CV DE ELIEZER PRIETO",
+    "faq.q1":"Onde encontro o CV de Eliezer Prieto?",
+    "faq.a1":"Neste site você encontra o curriculum vitae online, a folha de vida digital e o perfil profissional atualizado de Eliezer Prieto, com experiência, educação, habilidades e contato.",
+    "faq.q2":"O que inclui a folha de vida de Eliezer Prieto?",
+    "faq.a2":"Inclui experiência profissional em turismo e empreendedorismo, formação técnica e humanística, idiomas, projetos e links diretos para contato profissional.",
+    "faq.q3":"Onde está publicado o perfil profissional online de Eliezer Prieto?",
+    "faq.a3":"O perfil profissional online de Eliezer Prieto está publicado no GitHub Pages, em uma versão otimizada para SEO e acessível de qualquer dispositivo.",
     "contact.label":"06 — Contato","contact.title":"VAMOS CONVERSAR",
     "contact.p":"Eliezer Antonio Prieto Pantoja. Atualmente em Boa Vista, Roraima, Brasil, com disponibilidade imediata para contrato em oportunidades de turismo, operações, projetos técnicos e atendimento ao cliente de alto nível.",
     "contact.quote":'"Pronto para contribuir com experiência, critério e liderança desde o primeiro dia."',
     "contact.supportPrompt":"Você também pode apoiar minha causa",
     "contact.supportLink":"Ver doações",
+    "contact.download":"Download CV",
     "contact.location":"Boa Vista, Roraima, Brasil","contact.availability":"Disponibilidade imediata para contrato",
     "footer":'<span class="footer-line">© 2026 <span>Eliezer Prieto</span></span><span class="footer-line">Feita com</span><span class="footer-line">FÉ <span class="tri-mark"><span></span><span></span><span></span></span> ESPERANÇA <span class="tri-mark"><span></span><span></span><span></span></span> CARIDADE <span class="tri-mark"><span></span><span></span><span></span></span></span>'
   }
@@ -1067,6 +1119,20 @@ function renderStudyPanels(lang){
 }
 
 let currentLang='es';
+const cvDownloads={
+  es:'Eliezer-Prieto-CV-ES.pdf',
+  en:'Eliezer-Prieto-CV-EN.pdf',
+  pt:'Eliezer-Prieto-CV-PT.pdf'
+};
+
+function updateCvDownloads(lang){
+  const file=cvDownloads[lang]||cvDownloads.es;
+  document.querySelectorAll('.hero-download-link').forEach(link=>{
+    link.setAttribute('href',file);
+    link.setAttribute('download',file);
+  });
+}
+
 function setLang(lang){
   if(lang===currentLang)return;
   currentLang=lang;
@@ -1081,6 +1147,7 @@ function setLang(lang){
     const t=i18n[lang];
     els.forEach(el=>{const k=el.getAttribute('data-i18n');if(t[k]!==undefined)el.innerHTML=t[k];});
     renderStudyPanels(lang);
+    updateCvDownloads(lang);
     els.forEach(el=>el.classList.remove('fading'));
   },220);
 }
@@ -1093,6 +1160,8 @@ function navTo(id){
 document.querySelectorAll('[data-set-lang]').forEach(button=>{
   button.addEventListener('click',()=>setLang(button.getAttribute('data-set-lang')));
 });
+
+updateCvDownloads(currentLang);
 
 const bgCanvas=document.getElementById('bgSymbols');
 const bgCtx=bgCanvas?bgCanvas.getContext('2d'):null;
