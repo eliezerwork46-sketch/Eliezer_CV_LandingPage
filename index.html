@@ -1164,7 +1164,7 @@ function resizeBg(){
 }
 
 function makeSymbol(i){
-  const types=['triangle','square','compass','mason'];
+  const types=['triangle','square','compass','masonicMark'];
   return {
     type:types[i%types.length],
     x:Math.random()*window.innerWidth,
@@ -1218,6 +1218,26 @@ function drawMason(s){
   bgCtx.stroke();
 }
 
+function drawMasonicMark(s){
+  const topY=-s.size*0.92;
+  const armOuterX=s.size*0.94;
+  const armBottomY=s.size*1.08;
+  const squareTopY=s.size*0.18;
+  const squareOuterX=s.size*0.9;
+  const squareBottomY=s.size*0.88;
+
+  bgCtx.beginPath();
+  bgCtx.moveTo(0, topY);
+  bgCtx.lineTo(-armOuterX, armBottomY);
+  bgCtx.moveTo(0, topY);
+  bgCtx.lineTo(armOuterX, armBottomY);
+
+  bgCtx.moveTo(-squareOuterX, squareTopY);
+  bgCtx.lineTo(0, squareBottomY);
+  bgCtx.lineTo(squareOuterX, squareTopY);
+  bgCtx.stroke();
+}
+
 function renderBg(){
   if(!bgCanvas||!bgCtx)return;
   bgCtx.clearRect(0,0,bgCanvas.width,bgCanvas.height);
@@ -1244,12 +1264,13 @@ function renderBg(){
     bgCtx.save();
     bgCtx.translate(s.x,s.y);
     bgCtx.rotate(s.angle);
-    bgCtx.strokeStyle=s.type==='compass'?'rgba(232,49,79,'+s.alpha+')':(s.type==='mason'?'rgba(245,247,255,'+s.alpha+')':'rgba(122,171,255,'+s.alpha+')');
+    bgCtx.strokeStyle=s.type==='compass'?'rgba(232,49,79,'+s.alpha+')':((s.type==='masonicMark'||s.type==='mason')?'rgba(245,247,255,'+s.alpha+')':'rgba(122,171,255,'+s.alpha+')');
     bgCtx.lineWidth=1.2;
     if(s.type==='triangle')drawTriangle(s);
     if(s.type==='square')drawSquare(s);
     if(s.type==='compass')drawCompass(s);
     if(s.type==='mason')drawMason(s);
+    if(s.type==='masonicMark')drawMasonicMark(s);
     bgCtx.restore();
   });
   requestAnimationFrame(renderBg);
