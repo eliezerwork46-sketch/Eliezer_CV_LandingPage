@@ -5,7 +5,6 @@ Portfolio personal y `CV online` de Eliezer Prieto, publicado con GitHub Pages.
 ## Sitio publicado
 
 - Web principal: [Eliezer Prieto Curriculum Vitae](https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/)
-- Página de apoyo: [Support](https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/support.html)
 
 ## Qué incluye
 
@@ -13,7 +12,6 @@ Portfolio personal y `CV online` de Eliezer Prieto, publicado con GitHub Pages.
 - Secciones de perfil, experiencia, habilidades, educación y contacto
 - Tours destacados con enlaces externos
 - Optimización SEO básica para GitHub Pages
-- Página adicional de apoyo y recaudación
 - Descarga de CV en PDF por idioma:
   - [CV en español](https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/Eliezer-Prieto-CV-ES.pdf)
   - [CV in English](https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/Eliezer-Prieto-CV-EN.pdf)
@@ -22,7 +20,6 @@ Portfolio personal y `CV online` de Eliezer Prieto, publicado con GitHub Pages.
 ## Estructura principal
 
 - [`index.html`](C:\Users\Bazoka46\Downloads\Portfolio\index.html): página principal del portfolio
-- [`support.html`](C:\Users\Bazoka46\Downloads\Portfolio\support.html): página de apoyo y recaudación
 - [`cv-print.html`](C:\Users\Bazoka46\Downloads\Portfolio\cv-print.html): plantilla fuente del CV en español
 - [`cv-print-en.html`](C:\Users\Bazoka46\Downloads\Portfolio\cv-print-en.html): plantilla fuente del CV en inglés
 - [`cv-print-pt.html`](C:\Users\Bazoka46\Downloads\Portfolio\cv-print-pt.html): plantilla fuente del CV en portugués

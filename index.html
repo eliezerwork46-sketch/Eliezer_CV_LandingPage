@@ -396,6 +396,7 @@ nav::after{
 .edu-item:hover .edu-title{color:var(--red2);}
 .edu-year{color:var(--red2);font-size:0.78rem;letter-spacing:3px;text-transform:uppercase;padding-top:4px;}
 .edu-title{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;letter-spacing:1.5px;margin-bottom:6px;transition:color 0.3s;}
+.edu-status{margin-bottom:10px;color:var(--accent2);font-size:0.86rem;letter-spacing:0.08em;text-transform:uppercase;}
 .edu-inst{color:var(--muted);font-size:0.85rem;margin-bottom:10px;letter-spacing:0.5px;}
 .edu-note{color:var(--muted);font-size:0.92rem;line-height:1.8;font-style:italic;}
 
@@ -531,9 +532,6 @@ footer span{color:var(--red2);}
       <button class="badge" type="button" data-set-lang="en" aria-pressed="false">🇺🇸 English</button>
       <button class="badge" type="button" data-set-lang="pt" aria-pressed="false">🇧🇷 Português</button>
     </div>
-    <div class="hero-support">
-      <a class="hero-support-link" href="support.html"><span data-i18n="hero.supportPrompt">¿Quieres donar?</span> <strong data-i18n="hero.supportLink">Ver causa</strong></a>
-    </div>
     </div>
   </div>
   <div class="scroll-cue" data-i18n="hero.scroll">Desliza</div>
@@ -548,7 +546,6 @@ footer span{color:var(--red2);}
       <a class="seo-link" href="#experiencia" data-i18n="seo.link1">Ver experiencia profesional</a>
       <a class="seo-link" href="#educacion" data-i18n="seo.link2">Ver educación y estudios</a>
       <a class="seo-link" href="#contacto" data-i18n="seo.link3">Ir al contacto</a>
-      <a class="seo-link" href="support.html" data-i18n="seo.link4">Conocer mi causa familiar</a>
     </div>
   </div>
 </section>
@@ -770,6 +767,7 @@ footer span{color:var(--red2);}
       <div class="edu-item">
         <div class="edu-year" data-i18n="edu.y1">Formación Base</div>
         <div>
+          <div class="edu-status" data-i18n="edu.status1">Validación por el MEC en proceso.</div>
           <h3 class="edu-title">IPVCE Vladimir Ilich Lenin</h3>
           <div class="edu-inst" data-i18n="edu.inst1">Instituto Preuniversitario Vocacional de Ciencias Exactas · Cuba</div>
           <div class="edu-note" data-i18n="edu.note1">Una de las instituciones más exigentes de Cuba. Formación intensiva en matemáticas, física y ciencias aplicadas que forjó mi pensamiento analítico y disciplina.</div>
@@ -781,6 +779,15 @@ footer span{color:var(--red2);}
           <h3 class="edu-title" data-i18n="edu.title2">Ingeniería Nuclear</h3>
           <div class="edu-inst" data-i18n="edu.inst2">Universidad · Cuba</div>
           <div class="edu-note" data-i18n="edu.note2">Estudios en una de las ingenierías más complejas y exigentes. Física nuclear, termodinámica y sistemas de alta complejidad técnica.</div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-year" data-i18n="edu.y4">Educación Superior</div>
+        <div>
+          <div class="edu-status" data-i18n="edu.status4">Cursando</div>
+          <h3 class="edu-title" data-i18n="edu.title4">Ciencias Económicas</h3>
+          <div class="edu-inst" data-i18n="edu.inst4">Institución de enseñanza · Unifaticie</div>
+          <div class="edu-note" data-i18n="edu.note4">Comencé en 2026. Programa actual enfocado en economía, finanzas y gestión empresarial.</div>
         </div>
       </div>
       <div class="edu-item">
@@ -813,7 +820,6 @@ footer span{color:var(--red2);}
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a1 1 0 0 1 1 1v8.59l2.3-2.29a1 1 0 1 1 1.4 1.41l-4 3.99a1 1 0 0 1-1.4 0l-4-3.99a1 1 0 0 1 1.4-1.41L11 12.59V4a1 1 0 0 1 1-1Zm-7 14a1 1 0 0 1 1 1v1h12v-1a1 1 0 1 1 2 0v2a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1Z"/></svg>
           <span data-i18n="contact.download">Download CV</span>
         </a>
-        <a class="hero-support-link" href="support.html"><span data-i18n="contact.supportPrompt">También puedes apoyar mi causa</span> <strong data-i18n="contact.supportLink">Ver donaciones</strong></a>
       </div>
     </div>
     <div class="clinks">
@@ -849,13 +855,11 @@ const i18n = {
     "nav.about":"Sobre mí","nav.exp":"Experiencia","nav.skills":"Skills","nav.edu":"Educación","nav.contact":"Contacto",
     "hero.eyebrow":"Guía Turístico · Fundador · Emprendedor",
     "hero.desc":"Cubano resiliente, narrador de experiencias y creador de negocios. De la ingeniería nuclear al turismo internacional — tres idiomas, un solo propósito: conectar.",
-    "hero.supportPrompt":"¿Quieres donar?",
-    "hero.supportLink":"Ver causa",
     "hero.download":"Download CV",
     "hero.scroll":"Desliza",
     "seo.p1":"En este sitio presento mi <strong>Curriculum Vitae online</strong>, una <strong>hoja de vida profesional</strong> donde reúno mi experiencia, educación, habilidades, proyectos y formas de contacto.",
     "seo.p2":"Aquí comparto mi <strong>CV online</strong> y mi <strong>perfil profesional</strong> de forma clara, actualizada y accesible en español, inglés y portugués, para que puedas conocer mejor mi trayectoria y el valor que puedo aportar.",
-    "seo.link1":"Ver experiencia profesional","seo.link2":"Ver educación y estudios","seo.link3":"Ir al contacto","seo.link4":"Conocer mi causa familiar",
+    "seo.link1":"Ver experiencia profesional","seo.link2":"Ver educación y estudios","seo.link3":"Ir al contacto",
     "about.label":"01 — About","about.title":"SOBRE MÍ",
     "about.p1":"Soy <b>Eliezer Antonio Prieto Pantoja</b>, un profesional cubano cuya historia está hecha de ciencia, fe y resiliencia. Me gradué del <b>IPVCE Vladimir Ilich Lenin</b>, una de las instituciones más exigentes de Cuba, y desde ahí estudié <b>Ingeniería Nuclear</b> y un año en el Instituto Eclesiástico <b>Padre Félix Varela</b>.",
     "about.p2":"La búsqueda de libertad me llevó a nuevos horizontes, donde descubrí mi verdadera vocación: <b>crear experiencias que conecten personas con lugares y culturas</b>. Hoy combino mi formación científica con mi pasión por el mundo para guiar, emprender y construir.",
@@ -895,13 +899,13 @@ const i18n = {
     "skd1":"Capacidad de diseñar y ejecutar tours memorables.","skd2":"Trato efectivo con visitantes de diferentes culturas e idiomas.","skd3":"Servicio de alta calidad y resolución de problemas en tiempo real.","skd4":"Planificación y ejecución de proyectos de campo, como instalaciones solares.","skd5":"Coordinación de grupos, transporte y recursos con enfoque operativo.","skd6":"Uso de herramientas digitales para atraer clientes y posicionar servicios.","skd7":"Capacidad de reaccionar ante imprevistos con calma y eficacia.","skd8":"Formación en ciencias exactas aplicada a la toma de decisiones.","skd9":"Motivar y guiar equipos hacia objetivos comunes.",
     "edu.label":"04 — Educación","edu.title":"EDUCACIÓN",
     "edu.y1":"Formación Base","edu.inst1":"Instituto Preuniversitario Vocacional de Ciencias Exactas · Cuba","edu.note1":"Una de las instituciones más exigentes de Cuba. Formación intensiva en matemáticas, física y ciencias aplicadas que forjó mi pensamiento analítico y disciplina.",
+    "edu.status1":"Validación por el MEC en proceso.",
     "edu.y2":"Educación Superior","edu.title2":"Ingeniería Nuclear","edu.inst2":"Universidad · Cuba","edu.note2":"Estudios en una de las ingenierías más complejas y exigentes. Física nuclear, termodinámica y sistemas de alta complejidad técnica.",
+    "edu.y4":"Educación Superior","edu.status4":"Cursando","edu.title4":"Ciencias Económicas","edu.inst4":"Institución de enseñanza · Unifaticie","edu.note4":"Comencé en 2026. Programa actual enfocado en economía, finanzas y gestión empresarial.",
     "edu.y3":"Formación Humanística","edu.inst3":"Instituto de Estudios Eclesiásticos · Cuba","edu.note3":"Un año de humanidades, ética y pensamiento crítico. Enriqueció mi visión del mundo y mi capacidad de conectar con personas de distintas culturas y creencias.",
     "contact.label":"06 — Contacto","contact.title":"HABLEMOS",
     "contact.p":"Actualmente estoy en Boa Vista, Roraima, Brasil, con disponibilidad inmediata a contrato para oportunidades en turismo, operaciones, proyectos técnicos y atención al cliente de alto nivel.",
     "contact.quote":'"Listo para aportar experiencia, criterio y liderazgo desde el primer día."',
-    "contact.supportPrompt":"También puedes apoyar mi causa",
-    "contact.supportLink":"Ver donaciones",
     "contact.download":"Download CV",
     "contact.location":"Boa Vista, Roraima, Brasil","contact.availability":"Disponibilidad de desplazamiento dentro y fuera de Brasil",
     "footer":'<span class="footer-line">© 2026 <span>Eliezer Prieto</span></span><span class="footer-line">Hecha con</span><span class="footer-line">FE <span class="tri-mark"><span></span><span></span><span></span></span> ESPERANZA <span class="tri-mark"><span></span><span></span><span></span></span> CARIDAD <span class="tri-mark"><span></span><span></span><span></span></span></span>'
@@ -910,13 +914,11 @@ const i18n = {
     "nav.about":"About","nav.exp":"Experience","nav.skills":"Skills","nav.edu":"Education","nav.contact":"Contact",
     "hero.eyebrow":"Tour Guide · Founder · Entrepreneur",
     "hero.desc":"Resilient Cuban, experience storyteller and business creator. From nuclear engineering to international tourism — three languages, one purpose: to connect.",
-    "hero.supportPrompt":"Want to donate?",
-    "hero.supportLink":"See cause",
     "hero.download":"Download CV",
     "hero.scroll":"Scroll",
     "seo.p1":"On this site I present my <strong>online Curriculum Vitae</strong>, a professional <strong>resume and career profile</strong> where I bring together my experience, education, skills, projects and contact options.",
     "seo.p2":"Here I share my <strong>online CV</strong> and <strong>professional profile</strong> in a clear, updated format available in Spanish, English and Portuguese, so you can quickly understand my background and the value I can bring.",
-    "seo.link1":"View professional experience","seo.link2":"View education and studies","seo.link3":"Go to contact","seo.link4":"See my family cause",
+    "seo.link1":"View professional experience","seo.link2":"View education and studies","seo.link3":"Go to contact",
     "about.label":"01 — About","about.title":"ABOUT ME",
     "about.p1":"I am <b>Eliezer Antonio Prieto Pantoja</b>, a Cuban professional whose story is built on science, faith and resilience. I graduated from <b>IPVCE Vladimir Ilich Lenin</b>, one of Cuba's most demanding institutions, and went on to study <b>Nuclear Engineering</b> and one year at the Ecclesiastical Institute <b>Padre Félix Varela</b>.",
     "about.p2":"The search for freedom led me to new horizons, where I discovered my true calling: <b>creating experiences that connect people with places and cultures</b>. Today I combine my scientific background with my passion for the world to guide, venture, and build.",
@@ -956,13 +958,13 @@ const i18n = {
     "skd1":"Ability to design and deliver memorable tours.","skd2":"Effective interaction with visitors from different cultures and languages.","skd3":"High-quality service and real-time problem solving.","skd4":"Planning and execution of field projects, such as solar installations.","skd5":"Coordination of groups, transportation and resources with an operational focus.","skd6":"Use of digital tools to attract clients and position services.","skd7":"Ability to react to unexpected situations with calm and efficiency.","skd8":"Training in exact sciences applied to decision-making.","skd9":"Motivating and guiding teams toward shared goals.",
     "edu.label":"04 — Education","edu.title":"EDUCATION",
     "edu.y1":"Foundation","edu.inst1":"Pre-University Institute of Exact Sciences · Cuba","edu.note1":"One of Cuba's most demanding institutions. Intensive training in mathematics, physics and applied sciences that shaped my analytical thinking and discipline.",
+    "edu.status1":"MEC validation in process.",
     "edu.y2":"Higher Education","edu.title2":"Nuclear Engineering","edu.inst2":"University · Cuba","edu.note2":"Studies in one of the most complex and demanding fields of engineering. Nuclear physics, thermodynamics and high-complexity technical systems.",
+    "edu.y4":"Higher Education","edu.status4":"In progress","edu.title4":"Economic Sciences","edu.inst4":"Teaching institution · Unifaticie","edu.note4":"Started in 2026. Current program focused on economics, finance and business management.",
     "edu.y3":"Humanistic Studies","edu.inst3":"Ecclesiastical Studies Institute · Cuba","edu.note3":"One year of humanities, ethics and critical thinking. Enriched my worldview and ability to connect with people from different cultures and beliefs.",
     "contact.label":"06 — Contact","contact.title":"LET'S TALK",
     "contact.p":"I am currently based in Boa Vista, Roraima, Brazil, with immediate contract availability for opportunities in tourism, operations, technical projects and high-level customer service.",
     "contact.quote":'"Ready to contribute experience, judgment and leadership from day one."',
-    "contact.supportPrompt":"You can also support my cause",
-    "contact.supportLink":"View donations",
     "contact.download":"Download CV",
     "contact.location":"Boa Vista, Roraima, Brazil","contact.availability":"Available to travel within and outside Brazil",
     "footer":'<span class="footer-line">© 2026 <span>Eliezer Prieto</span></span><span class="footer-line">Made with</span><span class="footer-line">FAITH <span class="tri-mark"><span></span><span></span><span></span></span> HOPE <span class="tri-mark"><span></span><span></span><span></span></span> CHARITY <span class="tri-mark"><span></span><span></span><span></span></span></span>'
@@ -971,13 +973,11 @@ const i18n = {
     "nav.about":"Sobre mim","nav.exp":"Experiência","nav.skills":"Skills","nav.edu":"Educação","nav.contact":"Contato",
     "hero.eyebrow":"Guia Turístico · Fundador · Empreendedor",
     "hero.desc":"Cubano resiliente, narrador de experiências e criador de negócios. Da engenharia nuclear ao turismo internacional — três idiomas, um único propósito: conectar.",
-    "hero.supportPrompt":"Quer doar?",
-    "hero.supportLink":"Ver causa",
     "hero.download":"Download CV",
     "hero.scroll":"Role",
     "seo.p1":"Neste site apresento meu <strong>Curriculum Vitae online</strong>, uma <strong>folha de vida e perfil profissional</strong> onde reúno minha experiência, educação, habilidades, projetos e formas de contato.",
     "seo.p2":"Aqui compartilho meu <strong>CV online</strong> e meu <strong>perfil profissional</strong> de forma clara, atualizada e acessível em espanhol, inglês e português, para que você conheça melhor minha trajetória e o valor que posso entregar.",
-    "seo.link1":"Ver experiência profissional","seo.link2":"Ver educação e estudos","seo.link3":"Ir para contato","seo.link4":"Conhecer minha causa familiar",
+    "seo.link1":"Ver experiência profissional","seo.link2":"Ver educação e estudos","seo.link3":"Ir para contato",
     "about.label":"01 — About","about.title":"SOBRE MIM",
     "about.p1":"Sou <b>Eliezer Antonio Prieto Pantoja</b>, um profissional cubano cuja história é feita de ciência, fé e resiliência. Me formei no <b>IPVCE Vladimir Ilich Lenin</b>, uma das instituições mais exigentes de Cuba, e fui estudar <b>Engenharia Nuclear</b> e um ano no Instituto Eclesiástico <b>Padre Félix Varela</b>.",
     "about.p2":"A busca pela liberdade me levou a novos horizontes, onde descobri minha verdadeira vocação: <b>criar experiências que conectem pessoas com lugares e culturas</b>. Hoje combino minha formação científica com minha paixão pelo mundo para guiar, empreender e construir.",
@@ -1017,13 +1017,13 @@ const i18n = {
     "skd1":"Capacidade de desenhar e executar tours memoráveis.","skd2":"Relacionamento eficaz com visitantes de diferentes culturas e idiomas.","skd3":"Serviço de alta qualidade e resolução de problemas em tempo real.","skd4":"Planejamento e execução de projetos de campo, como instalações solares.","skd5":"Coordenação de grupos, transporte e recursos com foco operacional.","skd6":"Uso de ferramentas digitais para atrair clientes e posicionar serviços.","skd7":"Capacidade de reagir a imprevistos com calma e eficácia.","skd8":"Formação em ciências exatas aplicada à tomada de decisões.","skd9":"Motivar e guiar equipes em direção a objetivos comuns.",
     "edu.label":"04 — Educação","edu.title":"EDUCAÇÃO",
     "edu.y1":"Formação Base","edu.inst1":"Instituto Pré-Universitário Vocacional de Ciências Exatas · Cuba","edu.note1":"Uma das instituições mais exigentes de Cuba. Formação intensiva em matemática, física e ciências aplicadas que moldou meu pensamento analítico e disciplina.",
+    "edu.status1":"Validação pelo MEC em processo.",
     "edu.y2":"Educação Superior","edu.title2":"Engenharia Nuclear","edu.inst2":"Universidade · Cuba","edu.note2":"Estudos em uma das engenharias mais complexas. Física nuclear, termodinâmica e sistemas de alta complexidade técnica.",
+    "edu.y4":"Educação Superior","edu.status4":"Em curso","edu.title4":"Ciências Econômicas","edu.inst4":"Instituição de ensino · Unifaticie","edu.note4":"Comecei em 2026. Programa em andamento com foco em economia, finanças e gestão empresarial.",
     "edu.y3":"Formação Humanística","edu.inst3":"Instituto de Estudos Eclesiásticos · Cuba","edu.note3":"Um ano de humanidades, ética e pensamento crítico. Enriqueceu minha visão de mundo e minha capacidade de conectar com pessoas de diferentes culturas.",
     "contact.label":"06 — Contato","contact.title":"VAMOS CONVERSAR",
     "contact.p":"Atualmente estou em Boa Vista, Roraima, Brasil, com disponibilidade imediata para contrato em oportunidades de turismo, operações, projetos técnicos e atendimento ao cliente de alto nível.",
     "contact.quote":'"Pronto para contribuir com experiência, critério e liderança desde o primeiro dia."',
-    "contact.supportPrompt":"Você também pode apoiar minha causa",
-    "contact.supportLink":"Ver doações",
     "contact.download":"Download CV",
     "contact.location":"Boa Vista, Roraima, Brasil","contact.availability":"Disponibilidade para deslocamento dentro e fora do Brasil",
     "footer":'<span class="footer-line">© 2026 <span>Eliezer Prieto</span></span><span class="footer-line">Feita com</span><span class="footer-line">FÉ <span class="tri-mark"><span></span><span></span><span></span></span> ESPERANÇA <span class="tri-mark"><span></span><span></span><span></span></span> CARIDADE <span class="tri-mark"><span></span><span></span><span></span></span></span>'
