@@ -14,12 +14,12 @@
   :root {
     --navy: #08111f;
     --navy-soft: #12233f;
-    --panel: #e8efff;
-    --ink: #081425;
-    --muted: #1f314d;
-    --line: rgba(18, 35, 63, 0.14);
+    --panel: #f4f7fc;
+    --ink: #091322;
+    --muted: #1e304b;
+    --line: rgba(18, 35, 63, 0.12);
     --red: #c8102e;
-    --blue: #2c6bff;
+    --blue: #1c5bdd;
     --white: #ffffff;
   }
 
@@ -32,25 +32,25 @@
     height: 297mm;
     margin: 0;
     padding: 0;
-    background: #d8dfef;
+    background: #ffffff;
     font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     color: var(--ink);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   body {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
   }
 
   .page {
     width: 210mm;
     height: 297mm;
-    padding: 4.2mm;
-    background:
-      radial-gradient(circle at top right, rgba(44, 107, 255, 0.14), transparent 26%),
-      radial-gradient(circle at top left, rgba(200, 16, 46, 0.12), transparent 22%),
-      linear-gradient(180deg, #ffffff 0%, #f3f6ff 100%);
+    box-sizing: border-box;
+    padding: 4.8mm 5.2mm;
+    background: #ffffff;
     overflow: hidden;
   }
 
@@ -58,43 +58,47 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    border-radius: 5.2mm;
+    justify-content: space-between;
+    border-radius: 3.5mm;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.92);
-    border: 0.35mm solid rgba(18, 35, 63, 0.14);
-    box-shadow: 0 8mm 22mm rgba(8, 17, 31, 0.12);
+    background: #ffffff;
+    border: 0.35mm solid rgba(18, 35, 63, 0.16);
+    box-shadow: 0 3mm 12mm rgba(8, 17, 31, 0.06);
   }
 
+  /* HERO HEADER */
   .hero {
     display: grid;
-    grid-template-columns: 44mm 1fr;
-    gap: 8mm;
-    padding: 7.8mm 8.2mm 5.8mm;
+    grid-template-columns: 36mm 1fr;
+    gap: 5.5mm;
+    padding: 5mm 6.5mm 4.5mm;
     background:
       linear-gradient(130deg, rgba(8, 17, 31, 0.98), rgba(18, 35, 63, 0.95)),
       linear-gradient(90deg, rgba(200, 16, 46, 0.12), rgba(44, 107, 255, 0.1));
     color: var(--white);
     position: relative;
+    flex-shrink: 0;
   }
 
   .hero::after {
     content: "";
     position: absolute;
-    left: 10mm;
-    right: 10mm;
+    left: 7mm;
+    right: 7mm;
     bottom: 0;
-    height: 0.8mm;
+    height: 0.75mm;
     background: linear-gradient(90deg, var(--red), var(--white), var(--blue));
     opacity: 0.85;
   }
 
   .hero-photo {
-    width: 41mm;
-    height: 50mm;
-    border-radius: 4mm;
+    width: 36mm;
+    height: 44mm;
+    border-radius: 2.8mm;
     object-fit: cover;
-    border: 0.5mm solid rgba(255, 255, 255, 0.16);
-    box-shadow: 0 5mm 12mm rgba(0, 0, 0, 0.22);
+    object-position: center 15%;
+    border: 0.45mm solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 3mm 8mm rgba(0, 0, 0, 0.35);
   }
 
   .hero-copy {
@@ -105,18 +109,19 @@
   }
 
   .eyebrow {
-    margin: 0 0 1.5mm;
-    font-size: 2.8mm;
-    letter-spacing: 0.65mm;
+    margin: 0 0 0.8mm;
+    font-size: 2.5mm;
+    letter-spacing: 0.6mm;
     text-transform: uppercase;
-    color: #dbe8ff;
+    color: #c9dcff;
+    font-weight: 700;
   }
 
   h1 {
     margin: 0;
-    font-size: 10.8mm;
+    font-size: 8.6mm;
     line-height: 0.92;
-    letter-spacing: 0.25mm;
+    letter-spacing: 0.2mm;
     text-transform: uppercase;
   }
 
@@ -125,31 +130,32 @@
   }
 
   .summary {
-    margin: 2.2mm 0 2.6mm;
-    font-size: 3.1mm;
-    line-height: 1.34;
-    color: rgba(255, 255, 255, 0.97);
-    max-width: 130mm;
+    margin: 1.6mm 0 2mm;
+    font-size: 2.7mm;
+    line-height: 1.32;
+    color: rgba(255, 255, 255, 0.96);
+    max-width: 145mm;
   }
 
   .hero-meta {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.4mm 4mm;
-    font-size: 2.82mm;
-    color: rgba(255, 255, 255, 0.96);
+    gap: 0.7mm 3.5mm;
+    font-size: 2.5mm;
+    color: rgba(255, 255, 255, 0.92);
   }
 
   .hero-meta strong {
     color: #ffffff;
   }
 
+  /* CONTENT */
   .content {
     flex: 1;
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 5.3mm;
-    padding: 5.2mm 8.2mm 4mm;
+    grid-template-columns: 1.08fr 0.92fr;
+    gap: 4.8mm;
+    padding: 3.5mm 6.5mm 2.2mm;
     align-items: stretch;
   }
 
@@ -158,132 +164,156 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 4.6mm;
-  }
-
-  .section {
-    margin-bottom: 0;
+    gap: 2.6mm;
   }
 
   .section-title {
     display: flex;
     align-items: center;
-    gap: 2.2mm;
-    margin: 0 0 1.8mm;
-    font-size: 3.05mm;
-    letter-spacing: 0.42mm;
+    gap: 1.8mm;
+    margin: 0 0 1.2mm;
+    font-size: 2.75mm;
+    letter-spacing: 0.4mm;
     text-transform: uppercase;
     color: var(--navy-soft);
+    font-weight: 700;
   }
 
   .section-title::before {
     content: "";
-    width: 6mm;
-    height: 0.8mm;
+    width: 4.5mm;
+    height: 0.75mm;
     border-radius: 999px;
     background: linear-gradient(90deg, var(--red), var(--blue));
   }
 
   .card {
     background: var(--panel);
-    border: 0.35mm solid rgba(18, 35, 63, 0.18);
-    border-radius: 4mm;
-    padding: 2.95mm 3.15mm;
+    border: 0.3mm solid rgba(18, 35, 63, 0.14);
+    border-radius: 2.8mm;
+    padding: 2.2mm 2.8mm;
+  }
+
+  /* KPIs */
+  .kpis {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.4mm;
+    margin-bottom: 0.5mm;
+  }
+
+  .kpi {
+    padding: 1.8mm 1.2mm;
+    border-radius: 2.2mm;
+    background: linear-gradient(180deg, rgba(17, 71, 191, 0.08), rgba(200, 16, 46, 0.04));
+    border: 0.28mm solid rgba(18, 35, 63, 0.12);
+    text-align: center;
+  }
+
+  .kpi strong {
+    display: block;
+    font-size: 4.2mm;
+    line-height: 1;
+    color: var(--red);
+    margin-bottom: 0.4mm;
+  }
+
+  .kpi span {
+    display: block;
+    font-size: 1.95mm;
+    line-height: 1.15;
+    color: #1d3150;
+    font-weight: 600;
+  }
+
+  .mini-text {
+    font-size: 2.35mm;
+    line-height: 1.3;
+    color: #1f304c;
   }
 
   .entry + .entry {
-    margin-top: 2mm;
-    padding-top: 2mm;
-    border-top: 0.3mm solid rgba(18, 35, 63, 0.08);
+    margin-top: 1.6mm;
+    padding-top: 1.6mm;
+    border-top: 0.25mm solid rgba(18, 35, 63, 0.08);
   }
 
   .entry-head {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    gap: 3mm;
-    margin-bottom: 0.5mm;
+    gap: 2.5mm;
+    margin-bottom: 0.3mm;
   }
 
   .entry-title {
-    font-size: 3.02mm;
+    font-size: 2.7mm;
     font-weight: 700;
     color: var(--navy);
+    line-height: 1.15;
   }
 
   .entry-meta {
-    font-size: 2.55mm;
+    font-size: 2.25mm;
     color: var(--red);
     white-space: nowrap;
     font-weight: 600;
   }
 
   .entry-sub {
-    font-size: 2.65mm;
+    font-size: 2.35mm;
     font-weight: 600;
     color: #1147bf;
-    margin-bottom: 0.8mm;
+    margin-bottom: 0.45mm;
+    line-height: 1.15;
   }
 
   .entry p {
     margin: 0;
-    font-size: 2.5mm;
-    line-height: 1.3;
+    font-size: 2.25mm;
+    line-height: 1.25;
     color: var(--muted);
+  }
+
+  .skills-block + .skills-block {
+    margin-top: 1.4mm;
+    padding-top: 1.4mm;
+    border-top: 0.25mm solid rgba(18, 35, 63, 0.08);
+  }
+
+  .skills-label {
+    font-size: 2.15mm;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.8mm;
+    text-transform: uppercase;
+    letter-spacing: 0.2mm;
   }
 
   .pill-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 1.2mm;
+    gap: 0.85mm;
   }
 
   .pill {
-    padding: 0.95mm 1.8mm;
+    padding: 0.6mm 1.4mm;
     border-radius: 999px;
-    border: 0.3mm solid rgba(17, 71, 191, 0.24);
-    background: rgba(17, 71, 191, 0.12);
+    border: 0.25mm solid rgba(17, 71, 191, 0.2);
+    background: rgba(17, 71, 191, 0.08);
     color: #10284b;
-    font-size: 2.35mm;
+    font-size: 2.05mm;
     font-weight: 600;
-    line-height: 1.2;
-  }
-
-  .kpis {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1.8mm;
-    margin-bottom: 2.8mm;
-  }
-
-  .kpi {
-    padding: 2.4mm 1.9mm;
-    border-radius: 4mm;
-    background: linear-gradient(180deg, rgba(17, 71, 191, 0.1), rgba(200, 16, 46, 0.05));
-    border: 0.35mm solid rgba(18, 35, 63, 0.14);
-  }
-
-  .kpi strong {
-    display: block;
-    font-size: 4.8mm;
-    line-height: 1;
-    color: var(--red);
-    margin-bottom: 0.8mm;
-  }
-
-  .kpi span {
-    display: block;
-    font-size: 2.3mm;
-    line-height: 1.18;
-    color: #1d3150;
+    line-height: 1.15;
   }
 
   .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.2mm 3.2mm;
-    font-size: 2.6mm;
+    gap: 0.8mm 2.5mm;
+    font-size: 2.35mm;
     color: #162742;
+    line-height: 1.2;
   }
 
   .contact-item.full {
@@ -299,62 +329,71 @@
   }
 
   .qr-card {
-    margin-top: 2.2mm;
+    margin-top: 1.5mm;
     display: grid;
-    grid-template-columns: 18mm 1fr;
-    gap: 2.2mm;
+    grid-template-columns: 14mm 1fr;
+    gap: 2mm;
     align-items: center;
-    padding: 2mm;
-    border-radius: 3mm;
-    background: rgba(255, 255, 255, 0.56);
-    border: 0.3mm solid rgba(18, 35, 63, 0.12);
+    padding: 1.2mm 1.8mm;
+    border-radius: 2.2mm;
+    background: rgba(255, 255, 255, 0.7);
+    border: 0.25mm solid rgba(18, 35, 63, 0.12);
   }
 
   .qr-card img {
-    width: 16mm;
-    height: 16mm;
+    width: 13.5mm;
+    height: 13.5mm;
     display: block;
-    border-radius: 1.2mm;
+    border-radius: 1mm;
     background: #ffffff;
-    padding: 0.8mm;
+    padding: 0.4mm;
   }
 
   .qr-card strong {
     display: block;
-    font-size: 2.55mm;
+    font-size: 2.3mm;
     color: var(--navy);
-    margin-bottom: 0.45mm;
+    margin-bottom: 0.3mm;
   }
 
   .qr-card span {
     display: block;
-    font-size: 2.2mm;
-    line-height: 1.3;
+    font-size: 2mm;
+    line-height: 1.2;
     color: var(--muted);
   }
 
+  /* FOOTER */
   .footer {
-    margin-top: auto;
-    padding: 1.8mm 3mm 4.8mm;
+    padding: 1.4mm 6.5mm 2.2mm;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 0.25mm solid rgba(18, 35, 63, 0.1);
+    flex-shrink: 0;
+  }
+
+  .footer-location {
+    font-size: 2.2mm;
+    color: var(--muted);
+    letter-spacing: 0.2mm;
+    text-transform: uppercase;
+    font-weight: 500;
   }
 
   .footer-brand {
     text-align: right;
-    font-size: 2.65mm;
+    font-size: 2.3mm;
     color: var(--navy-soft);
     text-transform: uppercase;
-    letter-spacing: 0.18mm;
+    letter-spacing: 0.16mm;
   }
 
   .footer-brand strong {
     display: inline-flex;
     align-items: center;
-    gap: 1.6mm;
-    margin-top: 0.5mm;
-    letter-spacing: 0.28mm;
+    gap: 1.4mm;
+    letter-spacing: 0.25mm;
     color: var(--red);
   }
 
@@ -362,14 +401,14 @@
     display: inline-grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    width: 7px;
+    width: 6px;
     vertical-align: middle;
     transform: translateY(-0.5px);
   }
 
   .tri-mark span {
-    width: 2px;
-    height: 2px;
+    width: 1.8px;
+    height: 1.8px;
     border-radius: 50%;
     background: var(--red);
     display: block;
@@ -394,12 +433,6 @@
     justify-self: end;
     align-self: end;
   }
-
-  .mini-text {
-    font-size: 2.45mm;
-    line-height: 1.28;
-    color: #1f304c;
-  }
 </style>
 </head>
 <body>
@@ -409,22 +442,23 @@
         <img class="hero-photo" src="eliezer-portrait.jpg" alt="Professional photo of Eliezer Prieto for PDF Curriculum Vitae">
         <div class="hero-copy">
           <div>
-            <p class="eyebrow">Software Engineering · Economic Sciences · Pedagogy</p>
+            <p class="eyebrow">Software Engineering &middot; Economic Sciences &middot; Pedagogy</p>
             <h1>Eliezer <span class="surname">Prieto</span></h1>
             <p class="summary">
-              Trilingual professional with a solid foundation in exact sciences, computational logic, and interdisciplinary problem-solving. Concurrently pursuing three university degrees in Brazil: Software Engineering (UCDB), Economic Sciences, and Pedagogy (UniFatecie). Previous rigorous background in nuclear physics (InSTEC). Experienced in modular software development, logistical entrepreneurship, and operational leadership.
+              Trilingual professional with a solid foundation in exact sciences, computational logic, and interdisciplinary problem-solving. Concurrently pursuing three university degrees in Brazil: Software Engineering (UCDB), Economic Sciences, and Pedagogy (UniFatecie), with prior background in nuclear physics (InSTEC). Specialized in modular software development, quantitative modeling, and operational leadership.
             </p>
           </div>
           <div class="hero-meta">
             <div><strong>Location:</strong> Campo Grande, Mato Grosso do Sul, Brazil</div>
-            <div><strong>Availability:</strong> On-site & Remote</div>
-            <div><strong>Languages:</strong> Spanish (native), English, Portuguese</div>
-            <div><strong>Focus:</strong> Software, Systems Modeling, Data & Education</div>
+            <div><strong>Availability:</strong> On-site &amp; Remote</div>
+            <div><strong>Languages:</strong> Spanish (native), English (C1), Portuguese (C2)</div>
+            <div><strong>Focus:</strong> Software, Systems Modeling, Data &amp; Education</div>
           </div>
         </div>
       </header>
 
       <section class="content">
+        <!-- LEFT COLUMN -->
         <div class="col">
           <div class="kpis">
             <div class="kpi"><strong>3</strong><span>Concurrent degrees</span></div>
@@ -436,80 +470,81 @@
           <section class="section">
             <h2 class="section-title">Professional Profile</h2>
             <div class="card mini-text">
-              I am Eliezer Antonio Prieto Pantoja. My background combines the analytical rigor of Cuba's elite IPVCE Vladimir Ilich Lenin and 3 years of Nuclear Engineering at InSTEC with humanistic studies at the Padre Félix Varela Institute. I am currently pursuing <strong>Software Engineering at UCDB</strong> (Campo Grande, MS) concurrently with <strong>Economic Sciences</strong> and <strong>Pedagogy at UniFatecie</strong>. Holding official microcertifications in operational cost structuring (CBO 2512-05), corporate accounting, and communication, I bring scientific methodology, algorithmic precision, economic analysis, and clear pedagogical knowledge transfer to solve complex problems.
+              Interdisciplinary professional focused on solving complex problems through mathematical rigor, software engineering, and economic optimization. Elite background (IPVCE Lenin &amp; 3 years in Nuclear Engineering at InSTEC), with proven ability to model systems, structure operational costs, and transfer technical knowledge with instructional clarity.
             </div>
           </section>
 
           <section class="section">
-            <h2 class="section-title">Experience & Projects</h2>
+            <h2 class="section-title">Experience &amp; Projects</h2>
             <div class="card">
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">Software Development & Architecture</div>
-                  <div class="entry-meta">2024 — Present</div>
+                  <div class="entry-title">Software Development &amp; Architecture</div>
+                  <div class="entry-meta">2024 &mdash; Present</div>
                 </div>
-                <div class="entry-sub">Academic & Applied Projects · UCDB</div>
+                <div class="entry-sub">Academic &amp; Applied Projects &middot; UCDB</div>
                 <p>
-                  Modular software design, algorithmic development, object-oriented programming, databases, and web systems. Systematic use of Git for version control and software engineering methodologies.
+                  Modular software design, algorithmic development, OOP, relational databases, and web systems. Systematic use of Git/GitHub for version control and software engineering methodologies.
                 </p>
               </article>
 
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">Founder & Operational Modeling</div>
+                  <div class="entry-title">Founder &amp; Operational Modeling</div>
                   <div class="entry-meta">Startup</div>
                 </div>
-                <div class="entry-sub">Hasta Tu Puerta · Logistics & Routing</div>
+                <div class="entry-sub">Hasta Tu Puerta &middot; Logistics &amp; Routing</div>
                 <p>
-                  Founded and managed an urban package delivery startup. Implemented algorithmic route optimization yielding a 40% reduction in delivery times, processing 1,200+ shipments debt-free.
+                  Founded and directed urban parcel delivery startup. Algorithmic route optimization achieving a 40% reduction in delivery times and 1,200+ shipments processed debt-free.
                 </p>
               </article>
 
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">Numerical Simulation & Nuclear Physics</div>
+                  <div class="entry-title">Numerical Simulation &amp; Nuclear Physics</div>
                   <div class="entry-meta">InSTEC (3 years)</div>
                 </div>
-                <div class="entry-sub">Mathematical Physics & Complex Systems</div>
+                <div class="entry-sub">Mathematical Physics &amp; Complex Systems</div>
                 <p>
-                  Developed 7 technical modeling and simulation projects for physical, mechanical, and hydraulic systems using C++ and Python under rigorous scientific and mathematical standards.
+                  Developed 7 technical modeling and simulation projects for physical, mechanical, and hydraulic systems using C++ and Python under high scientific and mathematical standards.
                 </p>
               </article>
 
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">Operational Leadership & Intercultural Coordination</div>
-                  <div class="entry-meta">2017 — 2023</div>
+                  <div class="entry-title">Operational Leadership &amp; Intercultural Coordination</div>
+                  <div class="entry-meta">2017 &mdash; 2023</div>
                 </div>
-                <div class="entry-sub">Civitatis · GuruWalk (Previous Trajectory)</div>
+                <div class="entry-sub">Civitatis &middot; GuruWalk (Previous Trajectory)</div>
                 <p>
-                  Coordinated high-end experiences for 3,500+ international travelers across Spanish, English, and Portuguese (4.98/5.0★ rating). Real-time contingency management and group dynamics.
+                  Coordinated high-end experiences for 3,500+ international travelers across Spanish, English, and Portuguese (4.98/5.0&#9733; rating). Real-time contingency management and group dynamics.
                 </p>
               </article>
             </div>
           </section>
         </div>
 
+        <!-- RIGHT COLUMN -->
         <div class="col">
           <section class="section">
-            <h2 class="section-title">Education & Certifications</h2>
+            <h2 class="section-title">Education &amp; Certifications</h2>
             <div class="card">
               <article class="entry">
                 <div class="entry-head">
                   <div class="entry-title">Software Engineering</div>
                   <div class="entry-meta">In progress</div>
                 </div>
-                <div class="entry-sub">Universidade Católica Dom Bosco (UCDB) · Campo Grande, MS</div>
+                <div class="entry-sub">Universidade Cat&oacute;lica Dom Bosco (UCDB) &middot; Campo Grande, MS</div>
                 <p>Software lifecycle, algorithms, data structures, OOP, databases, and systems architecture.</p>
               </article>
 
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">Economic Sciences & Pedagogy</div>
+                  <div class="entry-title">Economic Sciences &amp; Pedagogy</div>
                   <div class="entry-meta">In progress</div>
                 </div>
-                <div class="entry-sub">Centro Universitário UniFatecie · Brazil</div>
-                <p>Econometrics, operational costs, financial analysis, learning psychology, and instructional design.</p>
+                <div class="entry-sub">Centro Universit&aacute;rio UniFatecie &middot; Brazil</div>
+                <p>Econometrics, operational costs, finance, learning psychology, and instructional design.</p>
               </article>
 
               <article class="entry">
@@ -517,16 +552,16 @@
                   <div class="entry-title">Official University Microcertifications</div>
                   <div class="entry-meta">Verifiable</div>
                 </div>
-                <div class="entry-sub">UniFatecie · Fundação Bradesco</div>
-                <p>Operational Cost Structuring (CBO 2512-05 · 60h), Accounting (10h), Communication (12h), Excel (15h).</p>
+                <div class="entry-sub">UniFatecie &middot; Funda&ccedil;&atilde;o Bradesco</div>
+                <p>Operational Cost Structuring (CBO 2512-05 &middot; 60h), Accounting (10h), Communication (12h), Excel (15h).</p>
               </article>
 
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">InSTEC · Nuclear Engineering</div>
+                  <div class="entry-title">InSTEC &middot; Nuclear Engineering</div>
                   <div class="entry-meta">3 years</div>
                 </div>
-                <div class="entry-sub">Higher Institute of Applied Sciences · Cuba</div>
+                <div class="entry-sub">Higher Institute of Technologies and Applied Sciences &middot; Cuba</div>
                 <p>Mathematical physics, thermodynamics, multivariable calculus, and complex systems modeling.</p>
               </article>
 
@@ -535,8 +570,8 @@
                   <div class="entry-title">IPVCE Vladimir Ilich Lenin</div>
                   <div class="entry-meta">Graduated</div>
                 </div>
-                <div class="entry-sub">Elite Vocational Institute of Exact Sciences · Cuba</div>
-                <p>Elite foundations in advanced mathematics, physics, and rigorous analytical thinking.</p>
+                <div class="entry-sub">Elite Vocational Institute of Exact Sciences &middot; Cuba</div>
+                <p>Elite foundation in advanced mathematics, physics, and rigorous analytical thinking.</p>
               </article>
             </div>
           </section>
@@ -544,25 +579,32 @@
           <section class="section">
             <h2 class="section-title">Core Skills</h2>
             <div class="card">
-              <div class="pill-row">
-                <span class="pill">Software Engineering</span>
-                <span class="pill">Algorithms & Logic</span>
-                <span class="pill">Python</span>
-                <span class="pill">C++</span>
-                <span class="pill">Web & Databases</span>
-                <span class="pill">Git / GitHub</span>
-                <span class="pill">Quantitative Modeling</span>
-                <span class="pill">Economic Analysis</span>
-                <span class="pill">Instructional Design</span>
-                <span class="pill">Operations Management</span>
-                <span class="pill">Spanish · Portuguese · English</span>
-                <span class="pill">Problem Solving</span>
+              <div class="skills-block">
+                <div class="skills-label">Software &amp; Data</div>
+                <div class="pill-row">
+                  <span class="pill">Software Eng.</span>
+                  <span class="pill">Algorithms &amp; OOP</span>
+                  <span class="pill">Python</span>
+                  <span class="pill">C++</span>
+                  <span class="pill">Web &amp; Databases</span>
+                  <span class="pill">Git / GitHub</span>
+                </div>
+              </div>
+              <div class="skills-block">
+                <div class="skills-label">Management &amp; Analysis</div>
+                <div class="pill-row">
+                  <span class="pill">Quantitative Modeling</span>
+                  <span class="pill">Operational Costs</span>
+                  <span class="pill">Accounting</span>
+                  <span class="pill">Logistics Operations</span>
+                  <span class="pill">Technical Instruction</span>
+                </div>
               </div>
             </div>
           </section>
 
           <section class="section">
-            <h2 class="section-title">Contact & Links</h2>
+            <h2 class="section-title">Contact &amp; Links</h2>
             <div class="card">
               <div class="contact-grid">
                 <div class="contact-item"><strong>Email:</strong> eliezer.work46@gmail.com</div>
@@ -575,8 +617,8 @@
               <div class="qr-card">
                 <img src="assets/cv/eliezer-site-qr.png" alt="QR code to Eliezer Prieto online CV">
                 <div>
-                  <strong>Online Portfolio & Certs</strong>
-                  <span>Scan this QR code to view live web CV and updated certificates.</span>
+                  <strong>Online Portfolio &amp; Certifications</strong>
+                  <span>Scan this QR code to view live web CV and verified credentials.</span>
                 </div>
               </div>
             </div>
@@ -585,6 +627,9 @@
       </section>
 
       <footer class="footer">
+        <div class="footer-location">
+          Campo Grande, MS, Brazil &middot; Online Portfolio &amp; Verified Credentials
+        </div>
         <div class="footer-brand">
           Made with
           <strong>FAITH <span class="tri-mark"><span></span><span></span><span></span></span> HOPE <span class="tri-mark"><span></span><span></span><span></span></span> CHARITY <span class="tri-mark"><span></span><span></span><span></span></span></strong>
