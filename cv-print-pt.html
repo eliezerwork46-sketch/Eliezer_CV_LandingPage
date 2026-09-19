@@ -149,13 +149,13 @@
     color: #ffffff;
   }
 
-  /* CONTENT */
+  /* MAIN TWO-COLUMN CONTENT */
   .content {
     flex: 1;
     display: grid;
-    grid-template-columns: 1.08fr 0.92fr;
+    grid-template-columns: 1.07fr 0.93fr;
     gap: 4.8mm;
-    padding: 3.5mm 6.5mm 2.2mm;
+    padding: 3.2mm 6.5mm 2mm;
     align-items: stretch;
   }
 
@@ -164,16 +164,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 2.6mm;
+    gap: 2.2mm;
   }
 
   .section-title {
     display: flex;
     align-items: center;
     gap: 1.8mm;
-    margin: 0 0 1.2mm;
-    font-size: 2.75mm;
-    letter-spacing: 0.4mm;
+    margin: 0 0 1mm;
+    font-size: 2.65mm;
+    letter-spacing: 0.35mm;
     text-transform: uppercase;
     color: var(--navy-soft);
     font-weight: 700;
@@ -190,8 +190,8 @@
   .card {
     background: var(--panel);
     border: 0.3mm solid rgba(18, 35, 63, 0.14);
-    border-radius: 2.8mm;
-    padding: 2.2mm 2.8mm;
+    border-radius: 2.6mm;
+    padding: 2mm 2.6mm;
   }
 
   /* KPIs */
@@ -199,11 +199,10 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.4mm;
-    margin-bottom: 0.5mm;
   }
 
   .kpi {
-    padding: 1.8mm 1.2mm;
+    padding: 1.5mm 1.1mm;
     border-radius: 2.2mm;
     background: linear-gradient(180deg, rgba(17, 71, 191, 0.08), rgba(200, 16, 46, 0.04));
     border: 0.28mm solid rgba(18, 35, 63, 0.12);
@@ -212,29 +211,30 @@
 
   .kpi strong {
     display: block;
-    font-size: 4.2mm;
+    font-size: 3.9mm;
     line-height: 1;
     color: var(--red);
-    margin-bottom: 0.4mm;
+    margin-bottom: 0.3mm;
   }
 
   .kpi span {
     display: block;
-    font-size: 1.95mm;
+    font-size: 1.9mm;
     line-height: 1.15;
     color: #1d3150;
     font-weight: 600;
   }
 
   .mini-text {
-    font-size: 2.35mm;
+    font-size: 2.25mm;
     line-height: 1.3;
     color: #1f304c;
   }
 
+  /* Entries */
   .entry + .entry {
-    margin-top: 1.6mm;
-    padding-top: 1.6mm;
+    margin-top: 1.2mm;
+    padding-top: 1.2mm;
     border-top: 0.25mm solid rgba(18, 35, 63, 0.08);
   }
 
@@ -242,50 +242,106 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    gap: 2.5mm;
-    margin-bottom: 0.3mm;
+    gap: 2.2mm;
+    margin-bottom: 0.2mm;
   }
 
   .entry-title {
-    font-size: 2.7mm;
+    font-size: 2.55mm;
     font-weight: 700;
     color: var(--navy);
     line-height: 1.15;
   }
 
   .entry-meta {
-    font-size: 2.25mm;
+    font-size: 2.1mm;
     color: var(--red);
     white-space: nowrap;
     font-weight: 600;
   }
 
   .entry-sub {
-    font-size: 2.35mm;
+    font-size: 2.2mm;
     font-weight: 600;
     color: #1147bf;
-    margin-bottom: 0.45mm;
+    margin-bottom: 0.25mm;
     line-height: 1.15;
   }
 
   .entry p {
     margin: 0;
-    font-size: 2.25mm;
-    line-height: 1.25;
+    font-size: 2.15mm;
+    line-height: 1.22;
     color: var(--muted);
   }
 
+  .entry-bullets {
+    margin: 0.4mm 0 0 0;
+    padding-left: 2.8mm;
+    font-size: 2.1mm;
+    line-height: 1.22;
+    color: var(--muted);
+  }
+
+  .entry-bullets li {
+    margin-bottom: 0.22mm;
+  }
+
+  /* Microcerts List */
+  .cert-item + .cert-item {
+    margin-top: 1.05mm;
+    padding-top: 1.05mm;
+    border-top: 0.25mm solid rgba(18, 35, 63, 0.08);
+  }
+
+  .cert-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 2mm;
+    margin-bottom: 0.15mm;
+  }
+
+  .cert-name {
+    font-size: 2.35mm;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.15;
+  }
+
+  .cert-tag {
+    font-size: 1.95mm;
+    font-weight: 600;
+    color: var(--red);
+    white-space: nowrap;
+  }
+
+  .cert-sub {
+    font-size: 2.05mm;
+    color: #1147bf;
+    font-weight: 600;
+    margin-bottom: 0.15mm;
+  }
+
+  .cert-desc {
+    font-size: 2.05mm;
+    line-height: 1.18;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* Skills Pills */
   .skills-block + .skills-block {
-    margin-top: 1.4mm;
-    padding-top: 1.4mm;
+    margin-top: 1mm;
+    padding-top: 1mm;
     border-top: 0.25mm solid rgba(18, 35, 63, 0.08);
   }
 
   .skills-label {
-    font-size: 2.15mm;
+    font-size: 2.05mm;
     font-weight: 700;
     color: var(--navy);
-    margin-bottom: 0.8mm;
+    margin-bottom: 0.6mm;
     text-transform: uppercase;
     letter-spacing: 0.2mm;
   }
@@ -293,27 +349,28 @@
   .pill-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.85mm;
+    gap: 0.7mm;
   }
 
   .pill {
-    padding: 0.6mm 1.4mm;
+    padding: 0.45mm 1.15mm;
     border-radius: 999px;
     border: 0.25mm solid rgba(17, 71, 191, 0.2);
     background: rgba(17, 71, 191, 0.08);
     color: #10284b;
-    font-size: 2.05mm;
+    font-size: 1.95mm;
     font-weight: 600;
     line-height: 1.15;
   }
 
+  /* Contact Grid & QR */
   .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.8mm 2.5mm;
-    font-size: 2.35mm;
+    gap: 0.65mm 2mm;
+    font-size: 2.25mm;
     color: #162742;
-    line-height: 1.2;
+    line-height: 1.18;
   }
 
   .contact-item.full {
@@ -329,37 +386,37 @@
   }
 
   .qr-card {
-    margin-top: 1.5mm;
+    margin-top: 1.1mm;
     display: grid;
-    grid-template-columns: 14mm 1fr;
+    grid-template-columns: 13.5mm 1fr;
     gap: 2mm;
     align-items: center;
-    padding: 1.2mm 1.8mm;
+    padding: 1mm 1.5mm;
     border-radius: 2.2mm;
     background: rgba(255, 255, 255, 0.7);
     border: 0.25mm solid rgba(18, 35, 63, 0.12);
   }
 
   .qr-card img {
-    width: 13.5mm;
-    height: 13.5mm;
+    width: 13mm;
+    height: 13mm;
     display: block;
     border-radius: 1mm;
     background: #ffffff;
-    padding: 0.4mm;
+    padding: 0.35mm;
   }
 
   .qr-card strong {
     display: block;
-    font-size: 2.3mm;
+    font-size: 2.2mm;
     color: var(--navy);
-    margin-bottom: 0.3mm;
+    margin-bottom: 0.2mm;
   }
 
   .qr-card span {
     display: block;
-    font-size: 2mm;
-    line-height: 1.2;
+    font-size: 1.9mm;
+    line-height: 1.18;
     color: var(--muted);
   }
 
@@ -468,56 +525,114 @@
           </div>
 
           <section class="section">
-            <h2 class="section-title">Perfil Profissional</h2>
+            <h2 class="section-title">Perfil Profissional &amp; Foco</h2>
             <div class="card mini-text">
-              Perfil multidisciplinar focado em solucionar problemas complexos por meio de rigor matem&aacute;tico, engenharia de software e otimiza&ccedil;&atilde;o econ&ocirc;mica. Forma&ccedil;&atilde;o de excel&ecirc;ncia (IPVCE Lenin e 3 anos de Engenharia Nuclear no InSTEC), com s&oacute;lida capacidade anal&iacute;tica para estruturar custos, projetar sistemas modulares e transmitir conhecimentos t&eacute;cnicos com clareza pedag&oacute;gica.
+              Profissional multidisciplinar focado em solucionar problemas complexos por meio de rigor cient&iacute;fico, engenharia de software modular e an&aacute;lise econ&ocirc;mica quantitativa. Formado no IPVCE Lenin e com 3 anos de Engenharia Nuclear no InSTEC, aplico modelagem formal para estruturar custos operacionais, projetar arquiteturas desacopladas, manter bancos de dados consistentes e transmitir conhecimentos t&eacute;cnicos com did&aacute;tica pedag&oacute;gica estruturada.
             </div>
           </section>
 
           <section class="section">
-            <h2 class="section-title">Experi&ecirc;ncia &amp; Projetos</h2>
+            <h2 class="section-title">Engenharia de Software &amp; Arquitetura</h2>
             <div class="card">
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">Desenvolvimento de Software &amp; Arquitetura</div>
+                  <div class="entry-title">Sistemas Modulares, POO &amp; Algoritmos</div>
                   <div class="entry-meta">2024 &mdash; Presente</div>
                 </div>
                 <div class="entry-sub">Projetos Acad&ecirc;micos e Aplicados &middot; UCDB</div>
-                <p>
-                  Design modular de software, algoritmos, POO, bancos de dados relacionais e desenvolvimento web. Uso sistem&aacute;tico de Git/GitHub para versionamento e engenharia de software.
-                </p>
+                <p>Desenvolvimento modular aplicando princ&iacute;pios formais da ci&ecirc;ncia da computa&ccedil;&atilde;o:</p>
+                <ul class="entry-bullets">
+                  <li>Implementa&ccedil;&atilde;o de estruturas de dados e algoritmos em Python e C++ priorizando baixo acoplamento e efici&ecirc;ncia computacional.</li>
+                  <li>Padr&otilde;es arquiteturais (MVC, Repository) e princ&iacute;pios SOLID para c&oacute;digo desacoplado e manuten&iacute;vel.</li>
+                  <li>Diagrama&ccedil;&atilde;o formal UML e especifica&ccedil;&atilde;o de requisitos t&eacute;cnicos de software.</li>
+                </ul>
               </article>
 
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">Fundador &amp; Modelagem Operacional</div>
-                  <div class="entry-meta">Startup</div>
+                  <div class="entry-title">Persist&ecirc;ncia Relacional, SQL &amp; Versionamento</div>
+                  <div class="entry-meta">UCDB</div>
                 </div>
-                <div class="entry-sub">Hasta Tu Puerta &middot; Log&iacute;stica e Roteamento</div>
-                <p>
-                  Cria&ccedil;&atilde;o e lideran&ccedil;a de startup de entregas urbanas. Otimiza&ccedil;&atilde;o algor&iacute;tmica de rotas com 40% de redu&ccedil;&atilde;o no tempo de entrega e mais de 1.200 encomendas operadas sem d&iacute;vidas.
-                </p>
+                <div class="entry-sub">Modelagem de Dados &middot; Integridade ACID &middot; Git/GitHub</div>
+                <p>Design, implementa&ccedil;&atilde;o e otimiza&ccedil;&atilde;o de bancos de dados relacionais:</p>
+                <ul class="entry-bullets">
+                  <li>Diagramas entidade-relacionamento (DER), normaliza&ccedil;&atilde;o at&eacute; 3FN e restri&ccedil;&otilde;es de integridade.</li>
+                  <li>Consultas complexas, gest&atilde;o de transa&ccedil;&otilde;es ACID e indexa&ccedil;&atilde;o de alta performance.</li>
+                  <li>Fluxos profissionais com Git/GitHub: branches por feature, pull requests e conventional commits.</li>
+                </ul>
               </article>
 
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">Simula&ccedil;&atilde;o Num&eacute;rica &amp; F&iacute;sica Nuclear</div>
+                  <div class="entry-title">Desenvolvimento Web &amp; Interfaces Anal&iacute;ticas</div>
+                  <div class="entry-meta">Full Stack</div>
+                </div>
+                <div class="entry-sub">Arquitetura Web Limpa &middot; UI Responsiva</div>
+                <p>Cria&ccedil;&atilde;o de plataformas web sem&acirc;nticas e pain&eacute;is interativos de dados:</p>
+                <ul class="entry-bullets">
+                  <li>Desenvolvimento web modular em JavaScript nativo e CSS moderno sem depend&ecirc;ncias desnecess&aacute;rias.</li>
+                  <li>Design responsivo adaptativo otimizado para acessibilidade (WCAG) e m&eacute;tricas Core Web Vitals.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Modelagem Cient&iacute;fica &amp; F&iacute;sica Nuclear</h2>
+            <div class="card">
+              <article class="entry">
+                <div class="entry-head">
+                  <div class="entry-title">Simula&ccedil;&atilde;o de Reatores &amp; Sistemas T&eacute;rmicos</div>
                   <div class="entry-meta">InSTEC (3 anos)</div>
                 </div>
-                <div class="entry-sub">F&iacute;sica Matem&aacute;tica e Sistemas Complexos</div>
-                <p>
-                  Desenvolvimento de 7 projetos de modelagem e simula&ccedil;&atilde;o computacional de sistemas mec&acirc;nicos, hidr&aacute;ulicos e t&eacute;rmicos com C++ e Python sob alto rigor cient&iacute;fico e matem&aacute;tico.
-                </p>
+                <div class="entry-sub">7 Projetos T&eacute;cnicos em C++ e Python &middot; F&iacute;sica Matem&aacute;tica</div>
+                <p>Forma&ccedil;&atilde;o cient&iacute;fica avan&ccedil;ada em c&aacute;lculo diferencial multivari&aacute;vel e termodin&acirc;mica t&eacute;cnica:</p>
+                <ul class="entry-bullets">
+                  <li>Modelagem computacional de reatores nucleares, fluidos e transfer&ecirc;ncia de calor n&atilde;o linear.</li>
+                  <li>Resolu&ccedil;&atilde;o num&eacute;rica de equa&ccedil;&otilde;es diferenciais (Runge-Kutta, diferen&ccedil;as finitas).</li>
+                </ul>
               </article>
 
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">Lideran&ccedil;a Operacional &amp; Coordena&ccedil;&atilde;o Intercultural</div>
+                  <div class="entry-title">M&eacute;todos Num&eacute;ricos &amp; Valida&ccedil;&atilde;o Anal&iacute;tica</div>
+                  <div class="entry-meta">InSTEC</div>
+                </div>
+                <div class="entry-sub">Modelagem de Sistemas Complexos &middot; C++ / Python</div>
+                <p>Aplica&ccedil;&atilde;o de algoritmos matem&aacute;ticos de alta precis&atilde;o sem margem de erro:</p>
+                <ul class="entry-bullets">
+                  <li>Aproxima&ccedil;&atilde;o de fun&ccedil;&otilde;es n&atilde;o lineares e modelagem estoc&aacute;stica de fen&ocirc;menos f&iacute;sicos.</li>
+                  <li>Rigor metodol&oacute;gico transferido para verifica&ccedil;&atilde;o e robustez de software cr&iacute;tico.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Empreendedorismo &amp; Experi&ecirc;ncia Operacional</h2>
+            <div class="card">
+              <article class="entry">
+                <div class="entry-head">
+                  <div class="entry-title">Hasta Tu Puerta &middot; Fundador &amp; Lead Operacional</div>
+                  <div class="entry-meta">Startup</div>
+                </div>
+                <div class="entry-sub">Log&iacute;stica de &Uacute;ltima Milha &middot; Otimiza&ccedil;&atilde;o de Rotas</div>
+                <p>Cria&ccedil;&atilde;o e dire&ccedil;&atilde;o operacional integral em ambiente de alta restri&ccedil;&atilde;o:</p>
+                <ul class="entry-bullets">
+                  <li>Algoritmos heur&iacute;sticos de roteamento com 40% de redu&ccedil;&atilde;o em tempos e custos operacionais.</li>
+                  <li>Estrutura&ccedil;&atilde;o rigorosa de custos diretos/indiretos e fluxo de caixa; opera&ccedil;&atilde;o sem d&iacute;vidas.</li>
+                  <li>1.200+ entregas gerenciadas com 100% de taxa efetiva e fideliza&ccedil;&atilde;o de clientes.</li>
+                </ul>
+              </article>
+
+              <article class="entry">
+                <div class="entry-head">
+                  <div class="entry-title">Lideran&ccedil;a de Opera&ccedil;&otilde;es &amp; Coordena&ccedil;&atilde;o</div>
                   <div class="entry-meta">2017 &mdash; 2023</div>
                 </div>
                 <div class="entry-sub">Civitatis &middot; GuruWalk (Trajet&oacute;ria Pr&eacute;via)</div>
                 <p>
-                  Coordena&ccedil;&atilde;o de experi&ecirc;ncias guiadas para mais de 3.500 viajantes de mais de 40 pa&iacute;ses em espanhol, ingl&ecirc;s e portugu&ecirc;s (avalia&ccedil;&atilde;o 4.98/5.0&#9733;). Resolu&ccedil;&atilde;o de conting&ecirc;ncias em tempo real e din&acirc;micas de grupo.
+                  Gest&atilde;o log&iacute;stica, din&acirc;micas de grupo e experi&ecirc;ncias guiadas para mais de 3.500 viajantes de mais de 40 pa&iacute;ses em espanhol, ingl&ecirc;s e portugu&ecirc;s (avalia&ccedil;&atilde;o de excel&ecirc;ncia 4.98/5.0&#9733;). Resolu&ccedil;&atilde;o de conting&ecirc;ncias operacionais em tempo real e comunica&ccedil;&atilde;o assertiva.
                 </p>
               </article>
             </div>
@@ -527,15 +642,15 @@
         <!-- COLUNA DIREITA -->
         <div class="col">
           <section class="section">
-            <h2 class="section-title">Educa&ccedil;&atilde;o &amp; Certifica&ccedil;&otilde;es</h2>
+            <h2 class="section-title">Educa&ccedil;&atilde;o Formal</h2>
             <div class="card">
               <article class="entry">
                 <div class="entry-head">
                   <div class="entry-title">Engenharia de Software</div>
                   <div class="entry-meta">Em andamento</div>
                 </div>
-                <div class="entry-sub">Universidade Cat&oacute;lica Dom Bosco (UCDB) &middot; Campo Grande, MS</div>
-                <p>Ciclo de vida do software, arquitetura de sistemas, estruturas de dados, algoritmos e bancos de dados.</p>
+                <div class="entry-sub">Universidade Cat&oacute;lica Dom Bosco (UCDB) &middot; MS, Brasil</div>
+                <p>Arquitetura de software, POO, estruturas de dados, SQL e ciclo de vida de desenvolvimento.</p>
               </article>
 
               <article class="entry">
@@ -544,25 +659,16 @@
                   <div class="entry-meta">Em andamento</div>
                 </div>
                 <div class="entry-sub">Centro Universit&aacute;rio UniFatecie &middot; Brasil</div>
-                <p>Econometria, custos operacionais, finan&ccedil;as, psicologia da aprendizagem e design instrucional.</p>
+                <p>Econometria, custos e or&ccedil;amentos, teoria micro/macro, psicologia da aprendizagem e did&aacute;tica.</p>
               </article>
 
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">Microcertifica&ccedil;&otilde;es Universit&aacute;rias Oficiais</div>
-                  <div class="entry-meta">Verific&aacute;veis</div>
+                  <div class="entry-title">Engenharia Nuclear</div>
+                  <div class="entry-meta">3 anos cursados</div>
                 </div>
-                <div class="entry-sub">UniFatecie &middot; Funda&ccedil;&atilde;o Bradesco</div>
-                <p>Custos Operacionais (CBO 2512-05 &middot; 60h), Contabilidade (10h), Comunica&ccedil;&atilde;o (12h), Excel (15h).</p>
-              </article>
-
-              <article class="entry">
-                <div class="entry-head">
-                  <div class="entry-title">InSTEC &middot; Engenharia Nuclear</div>
-                  <div class="entry-meta">3 anos</div>
-                </div>
-                <div class="entry-sub">Instituto Superior de Ci&ecirc;ncias e Tecnologias Aplicadas &middot; Cuba</div>
-                <p>F&iacute;sica matem&aacute;tica, termodin&acirc;mica, c&aacute;lculo multivari&aacute;vel e modelagem de sistemas complexos.</p>
+                <div class="entry-sub">InSTEC &middot; Instituto Superior de Ci&ecirc;ncias e Tecnologias Aplicadas</div>
+                <p>F&iacute;sica de reatores, m&eacute;todos num&eacute;ricos, termodin&acirc;mica e modelagem computacional de fluidos.</p>
               </article>
 
               <article class="entry">
@@ -571,8 +677,49 @@
                   <div class="entry-meta">Graduado</div>
                 </div>
                 <div class="entry-sub">Ci&ecirc;ncias Exatas de Alto Desempenho &middot; Cuba</div>
-                <p>Base formativa de excel&ecirc;ncia em matem&aacute;tica avan&ccedil;ada, f&iacute;sica e rigor anal&iacute;tico.</p>
+                <p>Institui&ccedil;&atilde;o de elite na prepara&ccedil;&atilde;o matem&aacute;tica avan&ccedil;ada e ci&ecirc;ncias experimentais.</p>
               </article>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Certifica&ccedil;&otilde;es &amp; Microcredenciais</h2>
+            <div class="card">
+              <div class="cert-item">
+                <div class="cert-head">
+                  <div class="cert-name">Estrutura&ccedil;&atilde;o de Custos Operacionais</div>
+                  <div class="cert-tag">60h &middot; CBO 2512-05</div>
+                </div>
+                <div class="cert-sub">Centro Universit&aacute;rio UniFatecie &middot; C. Econ&ocirc;micas</div>
+                <p class="cert-desc">Microcertifica&ccedil;&atilde;o universit&aacute;ria oficial em an&aacute;lise de custos diretos/indiretos, margem de contribui&ccedil;&atilde;o e viabilidade.</p>
+              </div>
+
+              <div class="cert-item">
+                <div class="cert-head">
+                  <div class="cert-name">Contabilidade Empresarial</div>
+                  <div class="cert-tag">10h &middot; Escola Virtual</div>
+                </div>
+                <div class="cert-sub">Funda&ccedil;&atilde;o Bradesco &middot; Aut: F8BEF3AE</div>
+                <p class="cert-desc">Balan&ccedil;os patrimoniais, demonstra&ccedil;&otilde;es cont&aacute;beis (DRE), fluxo de caixa e sa&uacute;de financeira.</p>
+              </div>
+
+              <div class="cert-item">
+                <div class="cert-head">
+                  <div class="cert-name">Comunica&ccedil;&atilde;o Empresarial</div>
+                  <div class="cert-tag">12h &middot; Escola Virtual</div>
+                </div>
+                <div class="cert-sub">Funda&ccedil;&atilde;o Bradesco &middot; Aut: CADC4F72</div>
+                <p class="cert-desc">Negocia&ccedil;&atilde;o estrat&eacute;gica, reda&ccedil;&atilde;o executiva, comunica&ccedil;&atilde;o assertiva e din&acirc;micas corporativas.</p>
+              </div>
+
+              <div class="cert-item">
+                <div class="cert-head">
+                  <div class="cert-name">Microsoft Excel 2016 - B&aacute;sico/Anal&iacute;tico</div>
+                  <div class="cert-tag">15h &middot; Escola Virtual</div>
+                </div>
+                <div class="cert-sub">Funda&ccedil;&atilde;o Bradesco &middot; Aut: 226452A2</div>
+                <p class="cert-desc">Modelagem anal&iacute;tica de planilhas eletr&ocirc;nicas, operadores l&oacute;gicos, f&oacute;rmulas avan&ccedil;adas e tabula&ccedil;&atilde;o.</p>
+              </div>
             </div>
           </section>
 
@@ -580,31 +727,40 @@
             <h2 class="section-title">Compet&ecirc;ncias Principais</h2>
             <div class="card">
               <div class="skills-block">
-                <div class="skills-label">Software &amp; Dados</div>
+                <div class="skills-label">Desenvolvimento &amp; Arquitetura</div>
                 <div class="pill-row">
                   <span class="pill">Eng. de Software</span>
                   <span class="pill">Algoritmos &amp; POO</span>
                   <span class="pill">Python</span>
                   <span class="pill">C++</span>
-                  <span class="pill">Web &amp; Bancos de Dados</span>
+                  <span class="pill">SQL &amp; RDBMS</span>
                   <span class="pill">Git / GitHub</span>
                 </div>
               </div>
               <div class="skills-block">
-                <div class="skills-label">Gest&atilde;o &amp; An&aacute;lise</div>
+                <div class="skills-label">Economia, Custos &amp; Finan&ccedil;as</div>
                 <div class="pill-row">
-                  <span class="pill">Modelagem Quantitativa</span>
-                  <span class="pill">Custos Operacionais</span>
-                  <span class="pill">Contabilidade</span>
-                  <span class="pill">Gest&atilde;o Log&iacute;stica</span>
+                  <span class="pill">Custos Operacionais (CBO)</span>
+                  <span class="pill">Contabilidade Empresarial</span>
+                  <span class="pill">Balan&ccedil;os &amp; DRE</span>
+                  <span class="pill">Excel Anal&iacute;tico</span>
+                </div>
+              </div>
+              <div class="skills-block">
+                <div class="skills-label">Metodologia, Lideran&ccedil;a &amp; Idiomas</div>
+                <div class="pill-row">
                   <span class="pill">Did&aacute;tica T&eacute;cnica</span>
+                  <span class="pill">Otimiza&ccedil;&atilde;o Log&iacute;stica</span>
+                  <span class="pill">Espanhol (Nativo)</span>
+                  <span class="pill">Ingl&ecirc;s (C1)</span>
+                  <span class="pill">Portugu&ecirc;s (C2)</span>
                 </div>
               </div>
             </div>
           </section>
 
           <section class="section">
-            <h2 class="section-title">Contato &amp; Links</h2>
+            <h2 class="section-title">Contato &amp; Portf&oacute;lio</h2>
             <div class="card">
               <div class="contact-grid">
                 <div class="contact-item"><strong>Email:</strong> eliezer.work46@gmail.com</div>
@@ -617,8 +773,8 @@
               <div class="qr-card">
                 <img src="assets/cv/eliezer-site-qr.png" alt="QR para o portf&oacute;lio online de Eliezer Prieto">
                 <div>
-                  <strong>Portf&oacute;lio Web &amp; Certifica&ccedil;&otilde;es</strong>
-                  <span>Escaneie este c&oacute;digo QR para ver certificados verific&aacute;veis e projetos interativos.</span>
+                  <strong>Portf&oacute;lio Web &amp; Certificados Oficiais</strong>
+                  <span>Escaneie este c&oacute;digo QR para ver certificados verific&aacute;veis e projetos interativos online.</span>
                 </div>
               </div>
             </div>

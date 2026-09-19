@@ -149,13 +149,13 @@
     color: #ffffff;
   }
 
-  /* CONTENT */
+  /* MAIN TWO-COLUMN CONTENT */
   .content {
     flex: 1;
     display: grid;
-    grid-template-columns: 1.08fr 0.92fr;
+    grid-template-columns: 1.07fr 0.93fr;
     gap: 4.8mm;
-    padding: 3.5mm 6.5mm 2.2mm;
+    padding: 3.2mm 6.5mm 2mm;
     align-items: stretch;
   }
 
@@ -164,16 +164,16 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 2.6mm;
+    gap: 2.2mm;
   }
 
   .section-title {
     display: flex;
     align-items: center;
     gap: 1.8mm;
-    margin: 0 0 1.2mm;
-    font-size: 2.75mm;
-    letter-spacing: 0.4mm;
+    margin: 0 0 1mm;
+    font-size: 2.65mm;
+    letter-spacing: 0.35mm;
     text-transform: uppercase;
     color: var(--navy-soft);
     font-weight: 700;
@@ -190,8 +190,8 @@
   .card {
     background: var(--panel);
     border: 0.3mm solid rgba(18, 35, 63, 0.14);
-    border-radius: 2.8mm;
-    padding: 2.2mm 2.8mm;
+    border-radius: 2.6mm;
+    padding: 2mm 2.6mm;
   }
 
   /* KPIs */
@@ -199,11 +199,10 @@
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1.4mm;
-    margin-bottom: 0.5mm;
   }
 
   .kpi {
-    padding: 1.8mm 1.2mm;
+    padding: 1.5mm 1.1mm;
     border-radius: 2.2mm;
     background: linear-gradient(180deg, rgba(17, 71, 191, 0.08), rgba(200, 16, 46, 0.04));
     border: 0.28mm solid rgba(18, 35, 63, 0.12);
@@ -212,29 +211,30 @@
 
   .kpi strong {
     display: block;
-    font-size: 4.2mm;
+    font-size: 3.9mm;
     line-height: 1;
     color: var(--red);
-    margin-bottom: 0.4mm;
+    margin-bottom: 0.3mm;
   }
 
   .kpi span {
     display: block;
-    font-size: 1.95mm;
+    font-size: 1.9mm;
     line-height: 1.15;
     color: #1d3150;
     font-weight: 600;
   }
 
   .mini-text {
-    font-size: 2.35mm;
+    font-size: 2.25mm;
     line-height: 1.3;
     color: #1f304c;
   }
 
+  /* Entries */
   .entry + .entry {
-    margin-top: 1.6mm;
-    padding-top: 1.6mm;
+    margin-top: 1.2mm;
+    padding-top: 1.2mm;
     border-top: 0.25mm solid rgba(18, 35, 63, 0.08);
   }
 
@@ -242,50 +242,106 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    gap: 2.5mm;
-    margin-bottom: 0.3mm;
+    gap: 2.2mm;
+    margin-bottom: 0.2mm;
   }
 
   .entry-title {
-    font-size: 2.7mm;
+    font-size: 2.55mm;
     font-weight: 700;
     color: var(--navy);
     line-height: 1.15;
   }
 
   .entry-meta {
-    font-size: 2.25mm;
+    font-size: 2.1mm;
     color: var(--red);
     white-space: nowrap;
     font-weight: 600;
   }
 
   .entry-sub {
-    font-size: 2.35mm;
+    font-size: 2.2mm;
     font-weight: 600;
     color: #1147bf;
-    margin-bottom: 0.45mm;
+    margin-bottom: 0.25mm;
     line-height: 1.15;
   }
 
   .entry p {
     margin: 0;
-    font-size: 2.25mm;
-    line-height: 1.25;
+    font-size: 2.15mm;
+    line-height: 1.22;
     color: var(--muted);
   }
 
+  .entry-bullets {
+    margin: 0.4mm 0 0 0;
+    padding-left: 2.8mm;
+    font-size: 2.1mm;
+    line-height: 1.22;
+    color: var(--muted);
+  }
+
+  .entry-bullets li {
+    margin-bottom: 0.22mm;
+  }
+
+  /* Microcerts List */
+  .cert-item + .cert-item {
+    margin-top: 1.05mm;
+    padding-top: 1.05mm;
+    border-top: 0.25mm solid rgba(18, 35, 63, 0.08);
+  }
+
+  .cert-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 2mm;
+    margin-bottom: 0.15mm;
+  }
+
+  .cert-name {
+    font-size: 2.35mm;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.15;
+  }
+
+  .cert-tag {
+    font-size: 1.95mm;
+    font-weight: 600;
+    color: var(--red);
+    white-space: nowrap;
+  }
+
+  .cert-sub {
+    font-size: 2.05mm;
+    color: #1147bf;
+    font-weight: 600;
+    margin-bottom: 0.15mm;
+  }
+
+  .cert-desc {
+    font-size: 2.05mm;
+    line-height: 1.18;
+    color: var(--muted);
+    margin: 0;
+  }
+
+  /* Skills Pills */
   .skills-block + .skills-block {
-    margin-top: 1.4mm;
-    padding-top: 1.4mm;
+    margin-top: 1mm;
+    padding-top: 1mm;
     border-top: 0.25mm solid rgba(18, 35, 63, 0.08);
   }
 
   .skills-label {
-    font-size: 2.15mm;
+    font-size: 2.05mm;
     font-weight: 700;
     color: var(--navy);
-    margin-bottom: 0.8mm;
+    margin-bottom: 0.6mm;
     text-transform: uppercase;
     letter-spacing: 0.2mm;
   }
@@ -293,27 +349,28 @@
   .pill-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.85mm;
+    gap: 0.7mm;
   }
 
   .pill {
-    padding: 0.6mm 1.4mm;
+    padding: 0.45mm 1.15mm;
     border-radius: 999px;
     border: 0.25mm solid rgba(17, 71, 191, 0.2);
     background: rgba(17, 71, 191, 0.08);
     color: #10284b;
-    font-size: 2.05mm;
+    font-size: 1.95mm;
     font-weight: 600;
     line-height: 1.15;
   }
 
+  /* Contact Grid & QR */
   .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 0.8mm 2.5mm;
-    font-size: 2.35mm;
+    gap: 0.65mm 2mm;
+    font-size: 2.25mm;
     color: #162742;
-    line-height: 1.2;
+    line-height: 1.18;
   }
 
   .contact-item.full {
@@ -329,37 +386,37 @@
   }
 
   .qr-card {
-    margin-top: 1.5mm;
+    margin-top: 1.1mm;
     display: grid;
-    grid-template-columns: 14mm 1fr;
+    grid-template-columns: 13.5mm 1fr;
     gap: 2mm;
     align-items: center;
-    padding: 1.2mm 1.8mm;
+    padding: 1mm 1.5mm;
     border-radius: 2.2mm;
     background: rgba(255, 255, 255, 0.7);
     border: 0.25mm solid rgba(18, 35, 63, 0.12);
   }
 
   .qr-card img {
-    width: 13.5mm;
-    height: 13.5mm;
+    width: 13mm;
+    height: 13mm;
     display: block;
     border-radius: 1mm;
     background: #ffffff;
-    padding: 0.4mm;
+    padding: 0.35mm;
   }
 
   .qr-card strong {
     display: block;
-    font-size: 2.3mm;
+    font-size: 2.2mm;
     color: var(--navy);
-    margin-bottom: 0.3mm;
+    margin-bottom: 0.2mm;
   }
 
   .qr-card span {
     display: block;
-    font-size: 2mm;
-    line-height: 1.2;
+    font-size: 1.9mm;
+    line-height: 1.18;
     color: var(--muted);
   }
 
@@ -439,7 +496,7 @@
   <main class="page">
     <section class="sheet">
       <header class="hero">
-        <img class="hero-photo" src="eliezer-portrait.jpg" alt="Professional photo of Eliezer Prieto for PDF Curriculum Vitae">
+        <img class="hero-photo" src="eliezer-portrait.jpg" alt="Professional portrait of Eliezer Prieto for PDF Curriculum Vitae">
         <div class="hero-copy">
           <div>
             <p class="eyebrow">Software Engineering &middot; Economic Sciences &middot; Pedagogy</p>
@@ -468,56 +525,114 @@
           </div>
 
           <section class="section">
-            <h2 class="section-title">Professional Profile</h2>
+            <h2 class="section-title">Professional Profile &amp; Focus</h2>
             <div class="card mini-text">
-              Interdisciplinary professional focused on solving complex problems through mathematical rigor, software engineering, and economic optimization. Elite background (IPVCE Lenin &amp; 3 years in Nuclear Engineering at InSTEC), with proven ability to model systems, structure operational costs, and transfer technical knowledge with instructional clarity.
+              Interdisciplinary professional focused on solving complex problems through scientific rigor, modular software engineering, and quantitative economic analysis. Graduated from IPVCE Lenin and with 3 years of Nuclear Engineering at InSTEC, I apply formal modeling to structure operational costs, design decoupled software architectures, maintain robust databases, and transfer technical knowledge with structured instructional pedagogy.
             </div>
           </section>
 
           <section class="section">
-            <h2 class="section-title">Experience &amp; Projects</h2>
+            <h2 class="section-title">Software Engineering &amp; Architecture</h2>
             <div class="card">
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">Software Development &amp; Architecture</div>
+                  <div class="entry-title">Modular Systems, OOP &amp; Algorithms</div>
                   <div class="entry-meta">2024 &mdash; Present</div>
                 </div>
                 <div class="entry-sub">Academic &amp; Applied Projects &middot; UCDB</div>
-                <p>
-                  Modular software design, algorithmic development, OOP, relational databases, and web systems. Systematic use of Git/GitHub for version control and software engineering methodologies.
-                </p>
+                <p>Modular software development applying formal computer science principles:</p>
+                <ul class="entry-bullets">
+                  <li>Implementation of data structures and algorithms in Python and C++ optimizing time and space complexity.</li>
+                  <li>Architectural design patterns (MVC, Repository) and SOLID principles for decoupled, maintainable code.</li>
+                  <li>Formal UML diagramming (use cases, class diagrams, sequence diagrams) and technical requirements specification.</li>
+                </ul>
               </article>
 
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">Founder &amp; Operational Modeling</div>
-                  <div class="entry-meta">Startup</div>
+                  <div class="entry-title">Relational Persistence, SQL &amp; Version Control</div>
+                  <div class="entry-meta">UCDB</div>
                 </div>
-                <div class="entry-sub">Hasta Tu Puerta &middot; Logistics &amp; Routing</div>
-                <p>
-                  Founded and directed urban parcel delivery startup. Algorithmic route optimization achieving a 40% reduction in delivery times and 1,200+ shipments processed debt-free.
-                </p>
+                <div class="entry-sub">Data Modeling &middot; ACID Integrity &middot; Git/GitHub</div>
+                <p>Design, implementation, and optimization of relational databases:</p>
+                <ul class="entry-bullets">
+                  <li>Entity-Relationship diagrams (ERD), normalization up to 3NF, and referential integrity constraints.</li>
+                  <li>Complex queries, ACID transaction management, and indexing for high-throughput consistency.</li>
+                  <li>Professional Git/GitHub workflows: feature branches, pull requests, and conventional commits.</li>
+                </ul>
               </article>
 
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">Numerical Simulation &amp; Nuclear Physics</div>
+                  <div class="entry-title">Web Systems &amp; Analytical Interfaces</div>
+                  <div class="entry-meta">Full Stack</div>
+                </div>
+                <div class="entry-sub">Clean Web Architecture &middot; Responsive UI</div>
+                <p>Development of semantic web platforms and interactive data dashboards:</p>
+                <ul class="entry-bullets">
+                  <li>Modular web development with vanilla JavaScript and modern CSS without unnecessary dependencies.</li>
+                  <li>Adaptive responsive design engineered for web accessibility (WCAG) and Core Web Vitals performance.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Scientific Modeling &amp; Nuclear Physics</h2>
+            <div class="card">
+              <article class="entry">
+                <div class="entry-head">
+                  <div class="entry-title">Reactor Simulation &amp; Thermal Systems</div>
                   <div class="entry-meta">InSTEC (3 years)</div>
                 </div>
-                <div class="entry-sub">Mathematical Physics &amp; Complex Systems</div>
-                <p>
-                  Developed 7 technical modeling and simulation projects for physical, mechanical, and hydraulic systems using C++ and Python under high scientific and mathematical standards.
-                </p>
+                <div class="entry-sub">7 Technical Projects in C++ and Python &middot; Mathematical Physics</div>
+                <p>Advanced scientific training in multivariable calculus and technical thermodynamics:</p>
+                <ul class="entry-bullets">
+                  <li>Computational modeling of nuclear reactors, fluid dynamics, and non-linear heat transfer.</li>
+                  <li>Numerical solution of differential equations (Runge-Kutta, finite difference methods).</li>
+                </ul>
               </article>
 
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">Operational Leadership &amp; Intercultural Coordination</div>
+                  <div class="entry-title">Numerical Methods &amp; Analytical Validation</div>
+                  <div class="entry-meta">InSTEC</div>
+                </div>
+                <div class="entry-sub">Complex Systems Modeling &middot; C++ / Python</div>
+                <p>Application of high-precision mathematical algorithms with zero margin of error:</p>
+                <ul class="entry-bullets">
+                  <li>Non-linear function approximation and stochastic modeling of physical phenomena.</li>
+                  <li>Formal mathematical rigor transferred to verification and robustness in mission-critical software.</li>
+                </ul>
+              </article>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Entrepreneurship &amp; Operational Leadership</h2>
+            <div class="card">
+              <article class="entry">
+                <div class="entry-head">
+                  <div class="entry-title">Hasta Tu Puerta &middot; Founder &amp; Operations Lead</div>
+                  <div class="entry-meta">Startup</div>
+                </div>
+                <div class="entry-sub">Last-Mile Logistics &middot; Route Optimization</div>
+                <p>Full operational and executive direction of urban logistics startup under high constraints:</p>
+                <ul class="entry-bullets">
+                  <li>Heuristic routing algorithms achieving a 40% reduction in delivery times and fuel expenses.</li>
+                  <li>Rigorous direct/indirect cost structuring, unit margins, and cash flow; 100% self-funded debt-free.</li>
+                  <li>1,200+ shipments processed with a 100% effective delivery rate and sustained customer retention.</li>
+                </ul>
+              </article>
+
+              <article class="entry">
+                <div class="entry-head">
+                  <div class="entry-title">Operational Leadership &amp; Coordination</div>
                   <div class="entry-meta">2017 &mdash; 2023</div>
                 </div>
                 <div class="entry-sub">Civitatis &middot; GuruWalk (Previous Trajectory)</div>
                 <p>
-                  Coordinated high-end experiences for 3,500+ international travelers across Spanish, English, and Portuguese (4.98/5.0&#9733; rating). Real-time contingency management and group dynamics.
+                  Logistics coordination, group dynamics, and guided experiences for 3,500+ international travelers from 40+ countries across Spanish, English, and Portuguese (4.98/5.0&#9733; rating). Real-time contingency management and assertive communication.
                 </p>
               </article>
             </div>
@@ -527,15 +642,15 @@
         <!-- RIGHT COLUMN -->
         <div class="col">
           <section class="section">
-            <h2 class="section-title">Education &amp; Certifications</h2>
+            <h2 class="section-title">Formal Education</h2>
             <div class="card">
               <article class="entry">
                 <div class="entry-head">
                   <div class="entry-title">Software Engineering</div>
                   <div class="entry-meta">In progress</div>
                 </div>
-                <div class="entry-sub">Universidade Cat&oacute;lica Dom Bosco (UCDB) &middot; Campo Grande, MS</div>
-                <p>Software lifecycle, algorithms, data structures, OOP, databases, and systems architecture.</p>
+                <div class="entry-sub">Universidade Cat&oacute;lica Dom Bosco (UCDB) &middot; MS, Brazil</div>
+                <p>Software architecture, OOP, data structures, SQL databases, and development lifecycle.</p>
               </article>
 
               <article class="entry">
@@ -544,25 +659,16 @@
                   <div class="entry-meta">In progress</div>
                 </div>
                 <div class="entry-sub">Centro Universit&aacute;rio UniFatecie &middot; Brazil</div>
-                <p>Econometrics, operational costs, finance, learning psychology, and instructional design.</p>
+                <p>Econometrics, operational costs, micro/macroeconomics, learning psychology, and technical pedagogy.</p>
               </article>
 
               <article class="entry">
                 <div class="entry-head">
-                  <div class="entry-title">Official University Microcertifications</div>
-                  <div class="entry-meta">Verifiable</div>
+                  <div class="entry-title">Nuclear Engineering</div>
+                  <div class="entry-meta">3 years completed</div>
                 </div>
-                <div class="entry-sub">UniFatecie &middot; Funda&ccedil;&atilde;o Bradesco</div>
-                <p>Operational Cost Structuring (CBO 2512-05 &middot; 60h), Accounting (10h), Communication (12h), Excel (15h).</p>
-              </article>
-
-              <article class="entry">
-                <div class="entry-head">
-                  <div class="entry-title">InSTEC &middot; Nuclear Engineering</div>
-                  <div class="entry-meta">3 years</div>
-                </div>
-                <div class="entry-sub">Higher Institute of Technologies and Applied Sciences &middot; Cuba</div>
-                <p>Mathematical physics, thermodynamics, multivariable calculus, and complex systems modeling.</p>
+                <div class="entry-sub">InSTEC &middot; Higher Institute of Applied Sciences and Technologies</div>
+                <p>Reactor physics, numerical methods, thermodynamics, and computational fluid mechanics.</p>
               </article>
 
               <article class="entry">
@@ -571,40 +677,90 @@
                   <div class="entry-meta">Graduated</div>
                 </div>
                 <div class="entry-sub">Elite Vocational Institute of Exact Sciences &middot; Cuba</div>
-                <p>Elite foundation in advanced mathematics, physics, and rigorous analytical thinking.</p>
+                <p>Elite preparatory training in advanced mathematics, physics, and experimental sciences.</p>
               </article>
             </div>
           </section>
 
           <section class="section">
-            <h2 class="section-title">Core Skills</h2>
+            <h2 class="section-title">Official Certifications &amp; Credentials</h2>
+            <div class="card">
+              <div class="cert-item">
+                <div class="cert-head">
+                  <div class="cert-name">Operational Cost Structuring</div>
+                  <div class="cert-tag">60h &middot; CBO 2512-05</div>
+                </div>
+                <div class="cert-sub">Centro Universit&aacute;rio UniFatecie &middot; Economic Sciences</div>
+                <p class="cert-desc">Official university microcredential in direct/indirect cost analysis, contribution margin, and financial viability.</p>
+              </div>
+
+              <div class="cert-item">
+                <div class="cert-head">
+                  <div class="cert-name">Corporate Accounting</div>
+                  <div class="cert-tag">10h &middot; Virtual School</div>
+                </div>
+                <div class="cert-sub">Funda&ccedil;&atilde;o Bradesco &middot; Auth: F8BEF3AE</div>
+                <p class="cert-desc">Balance sheets, financial statements (DRE), cash flow management, and organizational solvency.</p>
+              </div>
+
+              <div class="cert-item">
+                <div class="cert-head">
+                  <div class="cert-name">Business Communication</div>
+                  <div class="cert-tag">12h &middot; Virtual School</div>
+                </div>
+                <div class="cert-sub">Funda&ccedil;&atilde;o Bradesco &middot; Auth: CADC4F72</div>
+                <p class="cert-desc">Strategic workplace negotiation, executive writing, assertive communication, and corporate dynamics.</p>
+              </div>
+
+              <div class="cert-item">
+                <div class="cert-head">
+                  <div class="cert-name">Microsoft Excel 2016 - Basic/Analytical</div>
+                  <div class="cert-tag">15h &middot; Virtual School</div>
+                </div>
+                <div class="cert-sub">Funda&ccedil;&atilde;o Bradesco &middot; Auth: 226452A2</div>
+                <p class="cert-desc">Analytical spreadsheet modeling, logical operators, advanced formulas, and structured data tabulation.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Core Skills &amp; Competencies</h2>
             <div class="card">
               <div class="skills-block">
-                <div class="skills-label">Software &amp; Data</div>
+                <div class="skills-label">Software &amp; Architecture</div>
                 <div class="pill-row">
                   <span class="pill">Software Eng.</span>
                   <span class="pill">Algorithms &amp; OOP</span>
                   <span class="pill">Python</span>
                   <span class="pill">C++</span>
-                  <span class="pill">Web &amp; Databases</span>
+                  <span class="pill">SQL &amp; RDBMS</span>
                   <span class="pill">Git / GitHub</span>
                 </div>
               </div>
               <div class="skills-block">
-                <div class="skills-label">Management &amp; Analysis</div>
+                <div class="skills-label">Economics, Costs &amp; Finance</div>
                 <div class="pill-row">
-                  <span class="pill">Quantitative Modeling</span>
-                  <span class="pill">Operational Costs</span>
-                  <span class="pill">Accounting</span>
-                  <span class="pill">Logistics Operations</span>
-                  <span class="pill">Technical Instruction</span>
+                  <span class="pill">Operational Costs (CBO)</span>
+                  <span class="pill">Corporate Accounting</span>
+                  <span class="pill">Balance Sheets &amp; DRE</span>
+                  <span class="pill">Analytical Excel</span>
+                </div>
+              </div>
+              <div class="skills-block">
+                <div class="skills-label">Methodology, Leadership &amp; Languages</div>
+                <div class="pill-row">
+                  <span class="pill">Technical Pedagogy</span>
+                  <span class="pill">Logistics Optimization</span>
+                  <span class="pill">Spanish (Native)</span>
+                  <span class="pill">English (C1)</span>
+                  <span class="pill">Portuguese (C2)</span>
                 </div>
               </div>
             </div>
           </section>
 
           <section class="section">
-            <h2 class="section-title">Contact &amp; Links</h2>
+            <h2 class="section-title">Contact &amp; Portfolio</h2>
             <div class="card">
               <div class="contact-grid">
                 <div class="contact-item"><strong>Email:</strong> eliezer.work46@gmail.com</div>
@@ -617,8 +773,8 @@
               <div class="qr-card">
                 <img src="assets/cv/eliezer-site-qr.png" alt="QR code to Eliezer Prieto online CV">
                 <div>
-                  <strong>Online Portfolio &amp; Certifications</strong>
-                  <span>Scan this QR code to view live web CV and verified credentials.</span>
+                  <strong>Online Portfolio &amp; Official Credentials</strong>
+                  <span>Scan this QR code to view verified certificates and interactive web projects.</span>
                 </div>
               </div>
             </div>
