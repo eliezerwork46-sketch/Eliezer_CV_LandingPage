@@ -1,43 +1,46 @@
-# Eliezer Prieto CV Landing Page
+# Eliezer Prieto — CV & Portfolio Personal
 
-Portfolio personal y `CV online` de Eliezer Prieto, publicado con GitHub Pages.
+Portfolio profesional y `CV online` de **Eliezer Prieto**, publicado con **GitHub Pages**.
 
 ## Sitio publicado
 
-- Web principal: [Eliezer Prieto Curriculum Vitae](https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/)
+- Web principal: [Eliezer Prieto — Curriculum Vitae Online](https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/)
+
+## Perfil Académico & Profesional
+
+- **Ingeniería de Software** — Universidade Católica Dom Bosco (UCDB) · Cursando
+- **Ciencias Económicas** — Centro Universitário UniFatecie · Cursando
+- **Pedagogía** — Centro Universitário UniFatecie · Cursando
+- **Formación previa:** 3 años en Ingeniería Nuclear (InSTEC), graduado del IPVCE Vladimir Ilich Lenin e Instituto Padre Félix Varela (Cuba).
 
 ## Qué incluye
 
-- Landing page principal con versión en español, inglés y portugués
-- Secciones de perfil, experiencia, habilidades, educación y contacto
-- Tours destacados con enlaces externos
-- Optimización SEO básica para GitHub Pages
-- Descarga de CV en PDF por idioma:
+- Landing page interactiva trilingüe (**Español**, **Inglés**, **Portugués**)
+- Secciones: Sobre mí, Educación (3 carreras), Certificaciones y Cursos, Experiencia & Proyectos, Habilidades y Contacto
+- Trayectoria previa internacional en emprendimiento y turismo (sección colapsable con opiniones en Civitatis)
+- Fondo reactivo interactivo desarrollado con Canvas HTML5
+- Optimización SEO para GitHub Pages con Schema.org
+- Plantillas para impresión y descarga de CV en PDF:
   - [CV en español](https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/Eliezer-Prieto-CV-ES.pdf)
   - [CV in English](https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/Eliezer-Prieto-CV-EN.pdf)
   - [CV em português](https://eliezerwork46-sketch.github.io/Eliezer_CV_LandingPage/Eliezer-Prieto-CV-PT.pdf)
 
-## Estructura principal
+## Estructura de Archivos
 
-- [`index.html`](C:\Users\Bazoka46\Downloads\Portfolio\index.html): página principal del portfolio
-- [`cv-print.html`](C:\Users\Bazoka46\Downloads\Portfolio\cv-print.html): plantilla fuente del CV en español
-- [`cv-print-en.html`](C:\Users\Bazoka46\Downloads\Portfolio\cv-print-en.html): plantilla fuente del CV en inglés
-- [`cv-print-pt.html`](C:\Users\Bazoka46\Downloads\Portfolio\cv-print-pt.html): plantilla fuente del CV en portugués
-- [`robots.txt`](C:\Users\Bazoka46\Downloads\Portfolio\robots.txt): reglas para indexación
-- [`sitemap.xml`](C:\Users\Bazoka46\Downloads\Portfolio\sitemap.xml): mapa del sitio
+- `index.html`: página principal del portfolio y CV
+- `certificados/`: carpeta con certificados y títulos en PDF
+- `cv-print.html`: plantilla fuente del CV imprimible en español
+- `cv-print-en.html`: plantilla fuente del CV imprimible en inglés
+- `cv-print-pt.html`: plantilla fuente del CV imprimible en portugués
+- `robots.txt`: directivas de rastreo para motores de búsqueda
+- `sitemap.xml`: mapa del sitio para indexación
 
 ## Tecnologías
 
-- HTML
-- CSS
-- JavaScript vanilla
+- HTML5 semántico
+- CSS3 moderno (Variables CSS, Grid, Flexbox, media queries responsive)
+- JavaScript vanilla (sin dependencias ni build step)
 - GitHub Pages
-
-## Notas
-
-- El sitio está pensado como una página estática sin build step.
-- Los PDFs se generan a partir de las plantillas `cv-print*.html`.
-- La descarga del CV cambia según el idioma activo de la página principal.
 
 ## Repositorio
 
